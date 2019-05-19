@@ -58,7 +58,7 @@ export default props => (
         <Icon1 src={require(`../images/Equipment.png`)} alt={props.details.name} />
       </Icons>
       <Title>{props.details.name}</Title>
-      <SubDescription>{props.details.description}</SubDescription>
+      <SubDescription>{props.details.description.join(`\n`)}</SubDescription>
       <SubDescription>{props.details.cooldown}</SubDescription>
       <SubDescription>{props.details.duration}</SubDescription>
     </Class>
