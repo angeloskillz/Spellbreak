@@ -1,5 +1,5 @@
 import React from "react"
-import "./Header.css"
+import "./header.css"
 import { Link } from "gatsby"
 import { withStyles } from "@material-ui/core/styles"
 import SwipeableDrawer from "@material-ui/core/SwipeableDrawer"
