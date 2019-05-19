@@ -24,6 +24,12 @@ import stoneshaper from "../constants/classes/stoneshaper"
 import tempest from "../constants/classes/tempest"
 import toxicologist from "../constants/classes/toxicologist"
 import zealot from "../constants/classes/zealot"
+import amulets from "../constants/equipment/amulets"
+import belts from "../constants/equipment/belts"
+import boots from "../constants/equipment/boots"
+import consumables from "../constants/equipment/consumables"
+import runes from "../constants/equipment/runes"
+import EquipmentBox from "../components/Equipment"
 
 const gauntlets = [fire, frost, lightning, stone, toxic, wind]
 const classes = [
@@ -95,6 +101,61 @@ const IndexPage = props => (
             name={gauntlet.name}
             spellname={gauntlet.spellname}
           />
+        ))}
+      </div>
+    </div>
+
+    <div className="Selectan">
+      <h1>Amulets</h1>
+    </div>
+    <div className="CardboxGroupScroll">
+      <div className="CardboxGroup">
+        {amulets.map((equipment, index) => (
+          <EquipmentBox key={index} details={equipment} />
+        ))}
+      </div>
+    </div>
+
+    <div className="Selectan">
+      <h1>Belts</h1>
+    </div>
+    <div className="CardboxGroupScroll">
+      <div className="CardboxGroup">
+        {belts.map((equipment, index) => (
+          <EquipmentBox key={index} details={equipment} />
+        ))}
+      </div>
+    </div>
+
+    <div className="Selectan">
+      <h1>Boots</h1>
+    </div>
+    <div className="CardboxGroupScroll">
+      <div className="CardboxGroup">
+        {boots.map((equipment, index) => (
+          <EquipmentBox key={index} details={equipment} />
+        ))}
+      </div>
+    </div>
+
+    <div className="Selectan">
+      <h1>Consumables</h1>
+    </div>
+    <div className="CardboxGroupScroll">
+      <div className="CardboxGroup">
+        {consumables.map((equipment, index) => (
+          <EquipmentBox key={index} details={equipment} />
+        ))}
+      </div>
+    </div>
+
+    <div className="Selectan">
+      <h1>Runes</h1>
+    </div>
+    <div className="CardboxGroupScroll">
+      <div className="CardboxGroup">
+        {runes.map((equipment, index) => (
+          <EquipmentBox key={index} details={equipment} />
         ))}
       </div>
     </div>
