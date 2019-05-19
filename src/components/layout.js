@@ -29,21 +29,21 @@ const Layout = ({ children }) => (
             { name: "viewport", content: "width=device-width, initial-scale=1.0, viewport-fit=cover" }
           ]}
         >
-          <meta name="title" content="VGWIKI" />
-          <meta name="description" content="A Vainglory Wiki" />
+          <meta name="title" content="SBWIKI" />
+          <meta name="description" content="A Spellbreak Wiki" />
 
-          <meta name="keywords" content="vainglory, wiki, vaingloriwiki, vainglory wiki, vgwiki, vg, vaingloryheroes" />
+          <meta name="keywords" content="spellbreak, wiki, spellbreakwiki, spellbreak wiki, sbwiki, sb" />
 
           <meta property="og:type" content="website" />
-          <meta property="og:title" content="VGWIKI" />
-          <meta property="og:description" content="A Vainglory Wiki" />
+          <meta property="og:title" content="SBWIKI" />
+          <meta property="og:description" content="A Spellbreak Wiki" />
           <meta property="og:image" content="https://i.imgur.com/qBMkj19.png" />
-          <meta property="og:url" content="https://www.vgwiki.netlify.com" />
+          <meta property="og:url" content="https://www.sbwiki.netlify.com" />
 
           <meta property="twitter:card" content="summary_large_image" />
           <meta property="twitter:url" content="https://vgwiki.netlify.com/" />
-          <meta property="twitter:title" content="VGWIKI" />
-          <meta property="twitter:description" content="A Vainglory Wiki" />
+          <meta property="twitter:title" content="SBWIKI" />
+          <meta property="twitter:description" content="A Spellbreak Wiki" />
           <meta property="twitter:image" content="https://i.imgur.com/qBMkj19.png" />
           <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
           <html lang="en" />
