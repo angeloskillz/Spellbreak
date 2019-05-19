@@ -1,21 +1,86 @@
 import React from "react"
-import { Link } from "gatsby"
+import { graphql } from "gatsby"
+import ImgHero from "gatsby-image"
 
 import Layout from "../components/layout"
-import Image from "../components/image"
 import SEO from "../components/seo"
+import Classbox from "../components/Class"
+import Gauntletbox from "../components/Gauntlet"
+import fire from "../constants/gauntlets/fire"
+import frost from "../constants/gauntlets/frost"
+import lightning from "../constants/gauntlets/lightning"
+import stone from "../constants/gauntlets/stone"
+import toxic from "../constants/gauntlets/toxic"
+import wind from "../constants/gauntlets/wind"
 
-const IndexPage = () => (
+import { kinds } from "../constants/kinds"
+
+const gauntlets = [fire, frost, lightning, stone, toxic, wind]
+
+const IndexPage = props => (
   <Layout>
     <SEO title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
+    <div className="Hero">
+      <div className="HeroContainer">
+        <ImgHero
+          imgStyle={{ objectPosition: "center top" }}
+          className="Img"
+          fluid={props.data.imageOne.childImageSharp.fluid}
+        />
+        <div className="gradient" />
+      </div>
+      <div className="HeroGroup">
+        <h1>SPELLBREAK WIKI</h1>
+        <p>UPDATE 4.3</p>
+      </div>
     </div>
-    <Link to="/page-2/">Go to page 2</Link>
+    <div className="Selectan">
+      <h1>Select a Class</h1>
+    </div>
+    <div className="CardboxGroupScroll">
+      <div className="CardboxGroup">
+        {kinds.map((kind, index) => (
+          <Classbox
+            key={index}
+            title={kind.title}
+            image={require(`./../images/Classes/${kind.title}.jpg`)}
+            description={kind.description}
+            subdescription={kind.subdescription}
+          />
+        ))}
+      </div>
+    </div>
+
+    <div className="CardboxGroupScroll">
+      <div className="CardboxGroup">
+        {gauntlets.map((gauntlet, index) => (
+          <Gauntletbox
+            key={index}
+            title={gauntlet.title}
+            image={gauntlet.image}
+            description={gauntlet.description}
+            subdescription={gauntlet.subdescription}
+            stats={gauntlet.stats}
+            ultimate={gauntlet.ultimate}
+            name={gauntlet.name}
+            spellname={gauntlet.spellname}
+          />
+        ))}
+      </div>
+    </div>
   </Layout>
 )
 
 export default IndexPage
+
+export const pageQuery = graphql`
+  {
+    imageOne: file(relativePath: { eq: "Background.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 2560) {
+          ...GatsbyImageSharpFluid_tracedSVG
+        }
+      }
+    }
+  }
+`

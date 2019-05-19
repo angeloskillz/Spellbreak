@@ -1,16 +1,10 @@
-/**
- * Layout component that queries for data
- * with Gatsby's StaticQuery component
- *
- * See: https://www.gatsbyjs.org/docs/static-query/
- */
+import React from 'react'
+import PropTypes from 'prop-types'
+import Helmet from 'react-helmet'
+import { StaticQuery, graphql } from 'gatsby'
 
-import React from "react"
-import PropTypes from "prop-types"
-import { StaticQuery, graphql } from "gatsby"
-
-import Header from "./header"
-import "./layout.css"
+import Header from './header'
+import './layout.css'
 
 const Layout = ({ children }) => (
   <StaticQuery
@@ -25,21 +19,40 @@ const Layout = ({ children }) => (
     `}
     render={data => (
       <>
+        <Helmet
+          title={data.site.siteMetadata.title}
+          description={data.site.siteMetadata.description}
+          meta={[
+            { name: 'description', content: data.site.siteMetadata.description },
+            { name: 'keywords', content: 'vainglory, wiki, vaingloriwiki, vainglory wiki, vgwiki, vg, vaingloryheroes' },
+            { property: 'og:image', content: 'https://i.imgur.com/qBMkj19.png' },
+            { name: "viewport", content: "width=device-width, initial-scale=1.0, viewport-fit=cover" }
+          ]}
+        >
+          <meta name="title" content="VGWIKI" />
+          <meta name="description" content="A Vainglory Wiki" />
+
+          <meta name="keywords" content="vainglory, wiki, vaingloriwiki, vainglory wiki, vgwiki, vg, vaingloryheroes" />
+
+          <meta property="og:type" content="website" />
+          <meta property="og:title" content="VGWIKI" />
+          <meta property="og:description" content="A Vainglory Wiki" />
+          <meta property="og:image" content="https://i.imgur.com/qBMkj19.png" />
+          <meta property="og:url" content="https://www.vgwiki.netlify.com" />
+
+          <meta property="twitter:card" content="summary_large_image" />
+          <meta property="twitter:url" content="https://vgwiki.netlify.com/" />
+          <meta property="twitter:title" content="VGWIKI" />
+          <meta property="twitter:description" content="A Vainglory Wiki" />
+          <meta property="twitter:image" content="https://i.imgur.com/qBMkj19.png" />
+          <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+          <html lang="en" />
+        </Helmet>
         <Header siteTitle={data.site.siteMetadata.title} />
         <div
-          style={{
-            margin: `0 auto`,
-            maxWidth: 960,
-            padding: `0px 1.0875rem 1.45rem`,
-            paddingTop: 0,
-          }}
+
         >
-          <main>{children}</main>
-          <footer>
-            © {new Date().getFullYear()}, Built with
-            {` `}
-            <a href="https://www.gatsbyjs.org">Gatsby</a>
-          </footer>
+          {children}
         </div>
       </>
     )}
