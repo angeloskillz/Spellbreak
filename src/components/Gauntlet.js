@@ -1,33 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import ReactModal from 'react-modal'
-import Table from 'react-bootstrap'
-
-function rand() {
-  return Math.round(Math.random() * 20) - 10;
-}
-
-function getModalStyle() {
-  const top = 50 + rand();
-  const left = 50 + rand();
-
-  return {
-    top: `${top}%`,
-    left: `${left}%`,
-    transform: `translate(-${top}%, -${left}%)`,
-  };
-}
-
-const styles = theme => ({
-  paper: {
-    position: 'absolute',
-    width: theme.spacing.unit * 50,
-    backgroundColor: theme.palette.background.paper,
-    boxShadow: theme.shadows[5],
-    padding: theme.spacing.unit * 4,
-    outline: 'none',
-  },
-});
+import ReactModal from "react-modal"
 
 const Class = styled.div`
   position: relative;
@@ -89,21 +62,21 @@ const SubDescription = styled.h2`
 
 class Gauntletbox extends React.Component {
   constructor() {
-    super();
+    super()
     this.state = {
-      showModal: false
-    };
+      showModal: false,
+    }
 
-    this.handleOpenModal = this.handleOpenModal.bind(this);
-    this.handleCloseModal = this.handleCloseModal.bind(this);
+    this.handleOpenModal = this.handleOpenModal.bind(this)
+    this.handleCloseModal = this.handleCloseModal.bind(this)
   }
 
   handleOpenModal() {
-    this.setState({ showModal: true });
+    this.setState({ showModal: true })
   }
 
   handleCloseModal() {
-    this.setState({ showModal: false });
+    this.setState({ showModal: false })
   }
 
   render() {
@@ -118,10 +91,11 @@ class Gauntletbox extends React.Component {
             src={require(`../images/Gauntlets/${this.props.image}.png`)}
             alt={this.props.title}
           />
-          
+
           <Glyph src={require("../images/Glyph.png")} />
           <Title>{this.props.name}</Title>
-          </Class>
+        </Class>
+
         <ReactModal
           isOpen={this.state.showModal}
           className="Modal"
@@ -152,9 +126,8 @@ class Gauntletbox extends React.Component {
           <button onClick={this.handleCloseModal}>Close Modal</button>
         </ReactModal>
       </div>
-    );
+    )
   }
 }
 
-
-export default Gauntletbox;
+export default Gauntletbox
