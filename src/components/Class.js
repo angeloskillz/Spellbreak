@@ -148,7 +148,7 @@ class Classbox extends React.Component {
   render() {
     return (
       <div>
-        <Class>
+        <Class onClick={this.handleOpenModal}>
           <Sun src={require("../images/Sun.png")} />
           <Title>{this.props.name}</Title>
           <Icons>
