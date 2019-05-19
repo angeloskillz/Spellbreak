@@ -51,6 +51,10 @@ const IndexPage = props => (
       </div>
     </div>
 
+    <div className="Selectan">
+      <h1>Select a Gauntlet</h1>
+    </div>
+
     <div className="CardboxGroupScroll">
       <div className="CardboxGroup">
         {gauntlets.map((gauntlet, index) => (
