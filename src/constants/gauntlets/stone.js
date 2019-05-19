@@ -2,7 +2,7 @@ export default {
 	name: `Stone Gauntlet`,
 	spellname: `Shockwave`,
 	description: `Wave of earth from caster, damage on hit. Requires to be on ground to cast.`,
-	image: `Frost-Gauntlet`,
+	image: `Stone-Gauntlet`,
 	stats: [
 		{
 			type: `Common`,

@@ -2,7 +2,7 @@ export default {
 	name: `Fire Gauntlet`,
 	spellname: `Fireball`,
 	description: `Fire projectile, explodes on contact.`,
-	image: `Frost-Gauntlet`,
+	image: `Fire-Gauntlet`,
 	stats: [
 		{
 			type: `Common`,

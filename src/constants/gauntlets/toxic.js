@@ -2,7 +2,7 @@ export default {
 	name: `Toxic Gauntlet`,
 	spellname: `Toxic Spray`,
 	description: `Cluster of ten projectiles, damage based on number of projectiles hit [1/4/7/10]. Creates pools of poison upon landing on ground.`,
-	image: `Frost-Gauntlet`,
+	image: `Toxic-Gauntlet`,
 	stats: [
 		{
 			type: `Common`,

@@ -1,5 +1,32 @@
 import React from "react"
 import styled from "styled-components"
+import ReactModal from 'react-modal'
+
+function rand() {
+  return Math.round(Math.random() * 20) - 10;
+}
+
+function getModalStyle() {
+  const top = 50 + rand();
+  const left = 50 + rand();
+
+  return {
+    top: `${top}%`,
+    left: `${left}%`,
+    transform: `translate(-${top}%, -${left}%)`,
+  };
+}
+
+const styles = theme => ({
+  paper: {
+    position: 'absolute',
+    width: theme.spacing.unit * 50,
+    backgroundColor: theme.palette.background.paper,
+    boxShadow: theme.shadows[5],
+    padding: theme.spacing.unit * 4,
+    outline: 'none',
+  },
+});
 
 const Class = styled.div`
   position: relative;
@@ -37,6 +64,16 @@ const Icon1 = styled.img`
   margin-left: 111.5px;
   margin-top: 66px;
 `
+const Icon2 = styled.img`
+  position: absolute;
+  width: 54px;
+  height: 54px;
+  border-radius: 50px;
+  border: 2px solid #daa54e;
+  margin-left: 111.5px;
+  margin-top: 66px;
+  filter: blur(6px);
+`
 const SubDescription = styled.h2`
   font-family: Roboto;
   font-weight: normal;
@@ -49,36 +86,75 @@ const SubDescription = styled.h2`
   padding-right: 16px;
 `
 
-const Gauntletbox = props => (
-  <Class>
-    <Icon1
-      src={require(`../images/Gauntlets/${props.image}.png`)}
-      alt={props.title}
-    />
-    <Glyph src={require("../images/Glyph.png")} />
-    <Title>{props.name}</Title>
-    <SubDescription>{props.description}</SubDescription>
-    <SubDescription>{props.spellname}</SubDescription>
-    {props.stats.map((stat, index) => (
-      <div key={index}>
-        <SubDescription>Type: {stat.type}</SubDescription>
-        <SubDescription>Details:</SubDescription>
-        {stat.details.map((detail, detailIndex) => (
-          <SubDescription key={detailIndex}>
-            {detail.name}: {detail.value}
-          </SubDescription>
-        ))}
+class Gauntletbox extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      showModal: false
+    };
+
+    this.handleOpenModal = this.handleOpenModal.bind(this);
+    this.handleCloseModal = this.handleCloseModal.bind(this);
+  }
+
+  handleOpenModal() {
+    this.setState({ showModal: true });
+  }
+
+  handleCloseModal() {
+    this.setState({ showModal: false });
+  }
+
+  render() {
+    return (
+      <div>
+        <Class onClick={this.handleOpenModal}>
+          <Icon2
+            src={require(`../images/Gauntlets/${this.props.image}.png`)}
+            alt={this.props.title}
+          />
+          <Icon1
+            src={require(`../images/Gauntlets/${this.props.image}.png`)}
+            alt={this.props.title}
+          />
+          
+          <Glyph src={require("../images/Glyph.png")} />
+          <Title>{this.props.name}</Title>
+          </Class>
+        <ReactModal
+          isOpen={this.state.showModal}
+          className="Modal"
+          overlayClassName="Overlay"
+          onRequestClose={this.handleCloseModal}
+          shouldCloseOnOverlayClick={true}
+        >
+          <SubDescription>{this.props.description}</SubDescription>
+          <SubDescription>{this.props.spellname}</SubDescription>
+          {this.props.stats.map((stat, index) => (
+            <div key={index}>
+              <SubDescription>Type: {stat.type}</SubDescription>
+              <SubDescription>Details:</SubDescription>
+              {stat.details.map((detail, detailIndex) => (
+                <SubDescription key={detailIndex}>
+                  {detail.name}: {detail.value}
+                </SubDescription>
+              ))}
+            </div>
+          ))}
+          <SubDescription>Ultimate: {this.props.ultimate.name}</SubDescription>
+          <SubDescription>{this.props.ultimate.description}</SubDescription>
+          {this.props.ultimate.details.map((detail, index) => (
+            <SubDescription key={index}>
+              {detail.name}: {detail.value}
+            </SubDescription>
+          ))}
+          <button onClick={this.handleCloseModal}>Close Modal</button>
+        </ReactModal>
       </div>
-    ))}
+    );
+  }
+}
 
-    <SubDescription>Ultimate: {props.ultimate.name}</SubDescription>
-    <SubDescription>{props.ultimate.description}</SubDescription>
-    {props.ultimate.details.map((detail, index) => (
-      <SubDescription key={index}>
-        {detail.name}: {detail.value}
-      </SubDescription>
-    ))}
-  </Class>
-)
 
-export default Gauntletbox
+export default Gauntletbox;
+

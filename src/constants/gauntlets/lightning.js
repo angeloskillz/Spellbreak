@@ -2,7 +2,7 @@ export default {
 	name: `Lightning Gauntlet`,
 	spellname: `Lightning Bolts`,
 	description: `Three lightning projectiles shot in rapid succession.`,
-	image: `Frost-Gauntlet`,
+	image: `Lightning-Gauntlet`,
 	stats: [
 		{
 			type: `Common`,
