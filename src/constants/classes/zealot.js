@@ -1,7 +1,7 @@
 export default {
   name: `Zealot`,
   description: `The Zealot gains their power through their own pain.`,
-  image: ``,
+  image: `Zealot`,
   stats: [
     {
       name: `Frenzy`,

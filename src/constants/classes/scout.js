@@ -1,7 +1,7 @@
 export default {
   name: `Scout`,
   description: `None Available`,
-  image: ``,
+  image: `Scout`,
   stats: [
     {
       name: `Foresight`,

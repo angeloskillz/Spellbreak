@@ -12,10 +12,34 @@ import lightning from "../constants/gauntlets/lightning"
 import stone from "../constants/gauntlets/stone"
 import toxic from "../constants/gauntlets/toxic"
 import wind from "../constants/gauntlets/wind"
-
-import { kinds } from "../constants/kinds"
+import bulwark from "../constants/classes/bulwark"
+import conduit from "../constants/classes/conduit"
+import crackshot from "../constants/classes/crackshot"
+import frostborn from "../constants/classes/frostborn"
+import pyromancer from "../constants/classes/pyromancer"
+import scavenger from "../constants/classes/scavenger"
+import scholar from "../constants/classes/scholar"
+import scout from "../constants/classes/scout"
+import stoneshaper from "../constants/classes/stoneshaper"
+import tempest from "../constants/classes/tempest"
+import toxicologist from "../constants/classes/toxicologist"
+import zealot from "../constants/classes/zealot"
 
 const gauntlets = [fire, frost, lightning, stone, toxic, wind]
+const classes = [
+  bulwark,
+  conduit,
+  crackshot,
+  frostborn,
+  pyromancer,
+  scavenger,
+  scholar,
+  scout,
+  stoneshaper,
+  tempest,
+  toxicologist,
+  zealot,
+]
 
 const IndexPage = props => (
   <Layout>
@@ -39,13 +63,13 @@ const IndexPage = props => (
     </div>
     <div className="CardboxGroupScroll">
       <div className="CardboxGroup">
-        {kinds.map((kind, index) => (
+        {classes.map((kind, index) => (
           <Classbox
             key={index}
-            title={kind.title}
-            image={require(`./../images/Classes/${kind.title}.jpg`)}
+            title={kind.name}
+            image={require(`./../images/Classes/${kind.image}.jpg`)}
             description={kind.description}
-            subdescription={kind.subdescription}
+            stats={kind.stats}
           />
         ))}
       </div>

@@ -1,7 +1,7 @@
 export default {
   name: `Toxicologists`,
   description: `Toxicologists spew forth terrible poisons. `,
-  image: ``,
+  image: `Toxicologist`,
   stats: [
     {
       name: `Corrosion`,

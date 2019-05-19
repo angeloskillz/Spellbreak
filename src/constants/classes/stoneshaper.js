@@ -1,7 +1,7 @@
 export default {
   name: `Stoneshaper`,
   description: `The Stoneshapers forge with the power of earth itself. `,
-  image: ``,
+  image: `Stoneshaper`,
   stats: [
     {
       name: `Sunder`,

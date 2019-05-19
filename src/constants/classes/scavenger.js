@@ -1,7 +1,7 @@
 export default {
   name: `Scavenger`,
   description: `Scavengers make do with what's around but if they can't, they just make more.`,
-  image: ``,
+  image: `Scavenger`,
   stats: [
     {
       name: `Finders Keepers`,

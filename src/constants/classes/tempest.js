@@ -1,7 +1,7 @@
 export default {
   name: `Tempest`,
   description: `A Tempest's victory flies in on the wings of the wind. `,
-  image: ``,
+  image: `Tempest`,
   stats: [
     {
       name: `Updraft`,

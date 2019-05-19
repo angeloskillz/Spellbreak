@@ -1,7 +1,7 @@
 export default {
   name: `Conduit`,
   description: `Conduits call down the power of lightning from the skies. `,
-  image: ``,
+  image: `Conduit`,
   stats: [
     {
       name: `Lightning Fast`,

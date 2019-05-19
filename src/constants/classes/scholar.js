@@ -1,7 +1,7 @@
 export default {
   name: `Scholar`,
   description: `Scholars study runes and have learned powerful single-user magics.`,
-  image: ``,
+  image: `Scholar`,
   stats: [
     {
       name: `Updated Translations`,

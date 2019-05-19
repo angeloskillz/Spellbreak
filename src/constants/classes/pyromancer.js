@@ -1,7 +1,7 @@
 export default {
   name: `Pyromancer`,
   description: `From the flames, a Pyromancer wields fire to inflict long-lasting effects. `,
-  image: ``,
+  image: `Pyromancer`,
   stats: [
     {
       name: `Phoenix's Rebirth`,

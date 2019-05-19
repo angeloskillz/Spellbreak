@@ -1,7 +1,7 @@
 export default {
   name: `Crack Shot`,
   description: `Crack Shot prefer to take their foes down from long range with skillful shots.`,
-  image: ``,
+  image: `Crackshot`,
   stats: [
     {
       name: `Empower`,

@@ -1,7 +1,7 @@
 export default {
   name: `Frostborn`,
   description: `The Frostborn have mastered Ice and its chilly but nuanced uses. `,
-  image: ``,
+  image: `Frostborn`,
   stats: [
     {
       name: `Cold Snap`,

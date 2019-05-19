@@ -1,7 +1,7 @@
 export default {
   name: `Bulwark`,
   description: `The Bulwarks specialize in defense and close-quarters combat. `,
-  image: ``,
+  image: `Bulwark`,
   stats: [
     {
       name: `Fortify`,
