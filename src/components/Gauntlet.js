@@ -1,6 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import ReactModal from 'react-modal'
+import Table from 'react-bootstrap'
 
 function rand() {
   return Math.round(Math.random() * 20) - 10;
@@ -157,4 +158,3 @@ class Gauntletbox extends React.Component {
 
 
 export default Gauntletbox;
-
