@@ -55,11 +55,13 @@ const IndexPage = props => (
       </div>
       <div className="HeroGroup">
         <h1>SPELLBREAK WIKI</h1>
-        <p>UPDATE 4.3</p>
+        <img src={require('../images/Divider.png')}/>
+        <p>CLSED ALPHA</p>
       </div>
     </div>
     <div className="Selectan">
       <h1>Select a Class</h1>
+      <img src={require('../images/Divider.png')} style={{ width: '200px', display:'block', margin:'0 auto', marginBottom:'24px'}} />
     </div>
     <div className="CardboxGroupScroll">
       <div className="CardboxGroup">
