@@ -8,7 +8,7 @@ const Class = styled.div`
   height: auto;
   border-radius: 26px;
   background: #1a2327;
-  border: 2px solid #daa54e;
+  border: 1.5px solid #daa54e;
   box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
   margin-left: 16px;
   margin-top: 16px;
@@ -43,6 +43,7 @@ const Icon2 = styled.img`
   border-radius: 20px;
   filter: blur(9px);
 `
+
 const SubDescription = styled.h2`
   font-family: Roboto;
   font-weight: normal;
@@ -54,6 +55,64 @@ const SubDescription = styled.h2`
   padding-left: 16px;
   padding-right: 16px;
 `
+/* Modal */
+const ModalTitle = styled.h1`
+  font-family: "Roboto";
+  font-weight: bold;
+  font-size: 18px;
+  text-align: center;
+  color: #fff;
+  text-shadow: 0px 3px 6px #000;
+  margin-top: -30px;
+  text-transform: uppercase;
+`
+const ScrollGroup = styled.div`
+display: flex;
+flex-direction: row;
+vertical-align: middle;
+`
+const Scroll = styled.h1`
+  font-family: "Roboto";
+  font-weight: bold;
+  font-size: 16px;
+  text-align: center;
+  color: #daa54e;
+  text-transform: uppercase;
+  margin-top: 0px;
+  margin-bottom: 5px;
+  width: fit-content;
+  margin-left: 16px;
+`
+const Scrollimg = styled.img`
+  position: relative;
+  width: 45px;
+  height: 45px;
+  border-radius: 50px;
+  margin-left: 16px;
+`
+const Scrolltype = styled.h3`
+  font-family: Roboto;
+  font-weight: normal;
+  font-style: italic;
+  font-size: 14px;
+  text-align: center;
+  color: #ffffffb3;
+  margin-top: 0px;
+  width: fit-content;
+  margin-left: 16px;
+  margin-bottom:0px;
+`
+const Scrolldescription = styled.h2`
+  font-family: Roboto;
+  font-weight: normal;
+  font-size: 14px;
+  text-align: left;
+  color: #fff;
+  margin-bottom: 24px;
+  margin-left: 16px;
+  margin-right: 16px;
+`
+
 
 class Classbox extends React.Component {
   constructor() {
@@ -96,21 +155,27 @@ class Classbox extends React.Component {
           shouldCloseOnOverlayClick={true}
         >
           <Sun src={require("../images/Sun.png")} />
-          <Title>{this.props.name}</Title>
+          <ModalTitle>{this.props.name}</ModalTitle>
           <Icons>
             <Icon2 src={this.props.image} alt={this.props.title} />
             <Icon1 src={this.props.image} alt={this.props.title} />
           </Icons>
           <SubDescription>{this.props.description}</SubDescription>
+          <div style={{ overflowY: 'auto', height: '350px'}}>
           {this.props.stats.map((stat, index) => (
             <div key={index}>
-              <SubDescription>{stat.name}</SubDescription>
-              <SubDescription>{stat.type}</SubDescription>
-              <SubDescription>{stat.description}</SubDescription>
-              <SubDescription>{stat.image}</SubDescription>
+              <ScrollGroup>
+              <Scrollimg src={require(`../images/Classes/${stat.name}.jpg`)} alt={this.props.name} />
+              <div> 
+              <Scroll>{stat.name}</Scroll>
+                  <Scrolltype>{stat.type}</Scrolltype>
+                </div>
+                </ScrollGroup>
+              <Scrolldescription>{stat.description}</Scrolldescription>
             </div>
           ))}
-          <button onClick={this.handleCloseModal}>Close Modal</button>
+            </div>
+          <button onClick={this.handleCloseModal}>Close</button>
         </ReactModal>
       </div>
     )
