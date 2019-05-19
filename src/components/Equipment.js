@@ -23,24 +23,22 @@ const Title = styled.h1`
   text-align: center;
   color: #fff;
   text-shadow: 0px 3px 6px #000;
-  margin-top: -30px;
   text-transform: uppercase;
 `
 const Icons = styled.div`
   text-align: center;
+  margin-top: 16px;
 `
 const Icon1 = styled.img`
   position: relative;
-  width: 54px;
-  height: 54px;
-  border-radius: 20px;
 `
 const Icon2 = styled.img`
   position: absolute;
-  width: 54px;
-  height: 54px;
-  border-radius: 20px;
-  filter: blur(9px);
+  width: 60px;
+height: 60px;
+border: 1px solid #fec470;
+margin-left: 11px;
+margin-top: 11px;
 `
 const SubDescription = styled.h2`
   font-family: Roboto;
@@ -54,17 +52,14 @@ const SubDescription = styled.h2`
   padding-right: 16px;
 `
 export default props => (
-  <div>
     <Class>
-      <Sun src={require("../images/Sun.png")} />
-      <Title>{props.details.name}</Title>
       <Icons>
-        <Icon2 src={props.details.image} alt={props.details.name} />
-        <Icon1 src={props.details.image} alt={props.details.name} />
+        <Icon2 src={require(`../images/Equipment/${props.details.name}.png`)} alt={props.details.name} />
+        <Icon1 src={require(`../images/Equipment.png`)} alt={props.details.name} />
       </Icons>
+      <Title>{props.details.name}</Title>
       <SubDescription>{props.details.description}</SubDescription>
       <SubDescription>{props.details.cooldown}</SubDescription>
       <SubDescription>{props.details.duration}</SubDescription>
     </Class>
-  </div>
 )

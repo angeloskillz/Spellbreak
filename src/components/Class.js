@@ -5,13 +5,14 @@ import ReactModal from "react-modal"
 const Class = styled.div`
   position: relative;
   width: 280px;
-  height: auto;
+  align-items: stretch;
   border-radius: 26px;
   background: #1a2327;
   border: 1.5px solid #daa54e;
   box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
   margin-left: 16px;
   margin-top: 16px;
+  cursor: pointer;
 `
 const Sun = styled.img`
   display: block;
@@ -56,16 +57,6 @@ const SubDescription = styled.h2`
   padding-right: 16px;
 `
 /* Modal */
-const ModalTitle = styled.h1`
-  font-family: "Roboto";
-  font-weight: bold;
-  font-size: 18px;
-  text-align: center;
-  color: #fff;
-  text-shadow: 0px 3px 6px #000;
-  margin-top: -30px;
-  text-transform: uppercase;
-`
 const ScrollGroup = styled.div`
 display: flex;
 flex-direction: row;
@@ -136,7 +127,6 @@ class Classbox extends React.Component {
 
   render() {
     return (
-      <div>
         <Class onClick={this.handleOpenModal}>
           <Sun src={require("../images/Sun.png")} />
           <Title>{this.props.name}</Title>
@@ -145,7 +135,7 @@ class Classbox extends React.Component {
             <Icon1 src={this.props.image} alt={this.props.title} />
           </Icons>
           <SubDescription>{this.props.description}</SubDescription>
-        </Class>
+        
 
         <ReactModal
           isOpen={this.state.showModal}
@@ -155,13 +145,14 @@ class Classbox extends React.Component {
           shouldCloseOnOverlayClick={true}
         >
           <Sun src={require("../images/Sun.png")} />
-          <ModalTitle>{this.props.name}</ModalTitle>
+          <Title>{this.props.name}</Title>
           <Icons>
             <Icon2 src={this.props.image} alt={this.props.title} />
             <Icon1 src={this.props.image} alt={this.props.title} />
           </Icons>
           <SubDescription>{this.props.description}</SubDescription>
-          <div style={{ overflowY: 'auto', height: '350px'}}>
+          <img src={require('../images/Divider.png')} style={{ width: '200px', display: 'block', margin: '0 auto', marginBottom: '24px' }} alt='divider' />
+          <div style={{ overflowY: 'auto', height: '300px'}}>
           {this.props.stats.map((stat, index) => (
             <div key={index}>
               <ScrollGroup>
@@ -174,10 +165,11 @@ class Classbox extends React.Component {
               <Scrolldescription>{stat.description}</Scrolldescription>
             </div>
           ))}
+            <div className='gradientmodal'></div>
             </div>
-          <button onClick={this.handleCloseModal}>Close</button>
+          <button onClick={this.handleCloseModal} style={{position:'absolute', top:'0', right:'5px', width:'30px'}}>X</button>
         </ReactModal>
-      </div>
+      </Class>
     )
   }
 }
