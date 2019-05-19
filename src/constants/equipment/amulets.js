@@ -73,7 +73,7 @@ export default [
   {
     name: "Dextrous Amulet",
     image: ``,
-    description: "Cast Speed: +30%.",
+    description: ["Cast Speed: +30%."],
   },
   {
     name: "Behemoth Amulet",
@@ -87,7 +87,7 @@ export default [
   {
     name: "Leech Amulet",
     image: ``,
-    description: "Drain Health: 30%.",
+    description: ["Drain Health: 30%."],
   },
   {
     name: "Scribe Amulet",

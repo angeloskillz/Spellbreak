@@ -55,6 +55,7 @@ const SubDescription = styled.h2`
 `
 export default props => (
   <div>
+    {typeof props.details.description === "string" && console.log(props)}
     <Class>
       <Sun src={require("../images/Sun.png")} />
       <Title>{props.details.name}</Title>
@@ -62,7 +63,7 @@ export default props => (
         <Icon2 src={props.details.image} alt={props.details.name} />
         <Icon1 src={props.details.image} alt={props.details.name} />
       </Icons>
-      <SubDescription>{props.details.description}</SubDescription>
+      <SubDescription>{props.details.description.join(`\n`)}</SubDescription>
       <SubDescription>{props.details.cooldown}</SubDescription>
       <SubDescription>{props.details.duration}</SubDescription>
     </Class>
