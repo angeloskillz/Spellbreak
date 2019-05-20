@@ -5,6 +5,7 @@ import ReactModal from "react-modal"
 const Class = styled.div`
   position: relative;
   width: 280px;
+  height: 245px;
   align-items: stretch;
   border-radius: 26px;
   background: #1a2327;
@@ -126,6 +127,7 @@ class Classbox extends React.Component {
 
   render() {
     return (
+      <div>
         <Class onClick={this.handleOpenModal}>
           <Sun src={require("../images/Sun.png")} />
           <Title>{this.props.name}</Title>
@@ -134,7 +136,7 @@ class Classbox extends React.Component {
             <Icon1 src={this.props.image} alt={this.props.title} />
           </Icons>
           <SubDescription>{this.props.description}</SubDescription>
-        
+        </Class>
 
         <ReactModal
           isOpen={this.state.showModal}
@@ -142,7 +144,6 @@ class Classbox extends React.Component {
           overlayClassName="Overlay"
           shouldCloseOnOverlayClick={true}
           onRequestClose={this.handleCloseModal}
-          shouldReturnFocusAfterClose={true}
         >
           <Sun src={require("../images/Sun.png")} />
           <Title>{this.props.name}</Title>
@@ -169,7 +170,7 @@ class Classbox extends React.Component {
           </div>
           <button onClick={this.handleCloseModal} style={{ position: 'absolute', top: '0', right: '5px', width: '30px' }}>X</button>
         </ReactModal>
-      </Class>
+      </div>
     )
   }
 }
