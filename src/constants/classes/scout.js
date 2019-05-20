@@ -1,6 +1,6 @@
 export default {
   name: `Scout`,
-  description: `None Available`,
+  description: `Support Class`,
   image: `Scout`,
   stats: [
     {

@@ -77,7 +77,7 @@ const IndexPage = props => (
       <div className="Selectan">
         <h1>Select a Class</h1>
         <img
-          src={require("../images/Divider.png")}
+          src={require("../images/Divider2.png")}
           style={{
             width: "200px",
             display: "block",
@@ -105,7 +105,7 @@ const IndexPage = props => (
         <h1>Select a Gauntlet</h1>
       </div>
       <img
-        src={require("../images/Divider.png")}
+        src={require("../images/Divider2.png")}
         style={{
           width: "200px",
           display: "block",
@@ -136,7 +136,7 @@ const IndexPage = props => (
         <h1>Amulets</h1>
       </div>
       <img
-        src={require("../images/Divider.png")}
+        src={require("../images/Divider2.png")}
         style={{
           width: "200px",
           display: "block",
@@ -152,12 +152,11 @@ const IndexPage = props => (
           ))}
         </div>
       </div>
-
       <div className="Selectan">
         <h1>Belts</h1>
       </div>
       <img
-        src={require("../images/Divider.png")}
+        src={require("../images/Divider2.png")}
         style={{
           width: "200px",
           display: "block",
@@ -173,12 +172,11 @@ const IndexPage = props => (
           ))}
         </div>
       </div>
-
       <div className="Selectan">
         <h1>Boots</h1>
       </div>
       <img
-        src={require("../images/Divider.png")}
+        src={require("../images/Divider2.png")}
         style={{
           width: "200px",
           display: "block",
@@ -194,12 +192,11 @@ const IndexPage = props => (
           ))}
         </div>
       </div>
-
       <div className="Selectan">
         <h1>Consumables</h1>
       </div>
       <img
-        src={require("../images/Divider.png")}
+        src={require("../images/Divider2.png")}
         style={{
           width: "200px",
           display: "block",
@@ -215,12 +212,11 @@ const IndexPage = props => (
           ))}
         </div>
       </div>
-
       <div className="Selectan">
         <h1>Runes</h1>
       </div>
       <img
-        src={require("../images/Divider.png")}
+        src={require("../images/Divider2.png")}
         style={{
           width: "200px",
           display: "block",
