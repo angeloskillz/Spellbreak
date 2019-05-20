@@ -48,6 +48,35 @@ a {
   font-weight: 600;
 }
 
+.Tableclass {
+    margin: 0 auto;
+     width: 98%;
+     margin-top: 30px;
+     border:0px;
+}
+
+.Tableclass tr{
+    font-weight: 600;
+}
+
+.Tableclass th{
+    font-size: 12px;
+    color: white;
+    font-weight: 800;
+    text-align: left;
+}
+
+.Tableclass td{
+    font-size: 12px;
+    color: white;
+    text-align: left;
+    width: 70px;
+    height: 50px;
+}
+.striped{
+    background: rgba(128, 128, 128, 0.171);
+}
+
 /*                 DESKTOP          */
 .Hero {
   position: relative;
@@ -79,20 +108,7 @@ a {
   pointer-events: none;
 }
 
-.gradientmodal {
-  position: absolute;
-  height: 100px;
-  width: 100%;
-  bottom: 0;
-  border-radius: 0px 0px 26px 26px;
-  background: linear-gradient(
-    0deg,
-    #141b1e 10%,
-    #141b1e 0,
-    rgba(25, 26, 27, 0)
-  );
-  pointer-events: none;
-}
+
 
 .HeroGroup {
   position: absolute;
@@ -228,9 +244,49 @@ a {
 }
 
 /*modal queries*/
+@media (max-width: 560px) {
+.scrollable{
+  overflow-y: auto;
+  height: 200px;
+  margin-bottom: 40px;
+}
+.scrollableg{
+  overflow-y: auto;
+  height: 400px;
+  margin-bottom: 20px;
+}
+.gradientmodal {
+  position: absolute;
+  height: 100px;
+  width: 100%;
+  bottom: 0;
+  border-radius: 0px 0px 26px 26px;
+  background: linear-gradient(
+    0deg,
+    #141b1e 10%,
+    #141b1e 0,
+    rgba(25, 26, 27, 0)
+  );
+  pointer-events: none;
+}
+.gradientmodalg {
+  position: absolute;
+  height: 100px;
+  width: 100%;
+  bottom: 50px;
+  border-radius: 0px 0px 26px 26px;
+  background: linear-gradient(
+    0deg,
+    #141b1e 10%,
+    #141b1e 0,
+    rgba(25, 26, 27, 0)
+  );
+  pointer-events: none;
+}
+}
 
 .Modal {
-  max-width: 380px;
+  max-width: 480px;
   width: 95%;
   height: auto;
   margin: 0 auto;
@@ -264,7 +320,7 @@ a {
   width: 100px;
   height: 30px;
   background: none;
-  border-radius: 20px;
+  border-radius: 0px;
   border: 2px solid white;
   color: white;
   font-weight: 600;
@@ -281,9 +337,9 @@ a {
 }
 
 .Modal button:hover {
-  background: white;
-  color: black;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+  background: #daa54e;
+  color: white;
+  border: 2px solid #daa54e;
 }
 
 .ReactModal__Body--open {

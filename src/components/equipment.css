@@ -1,17 +1,18 @@
 .common {
-  color: grey;
+  color: white;
+  text-transform: uppercase;
 }
 
 .uncommon {
-  color: white;
+  color: #8ffcc6;
 }
 
 .rare {
-  color: blue;
+  color: #6eb5ff;
 }
 
 .epic {
-	color: purple
+	color: #B28ddf
 }
 
 .legendary {

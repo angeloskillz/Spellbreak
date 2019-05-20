@@ -1,12 +1,6 @@
 import React from "react"
 import "./header.css"
 import { Link } from "gatsby"
-// import { withStyles } from "@material-ui/core/styles"
-// import SwipeableDrawer from "@material-ui/core/SwipeableDrawer"
-// import Button from "@material-ui/core/Button"
-// import List from "@material-ui/core/List"
-// import ListItem from "@material-ui/core/ListItem"
-// import { Divider } from "@material-ui/core"
 
 class Header extends React.Component {
   state = {
@@ -53,7 +47,7 @@ class Header extends React.Component {
       >
         <div className="HeaderGroup">
           <Link to="/">
-            <img src={require("./../images/Sun.png")} alt="LOGOVGWIKI" />
+            <img src={require("./../images/Logo.png")} alt="LOGOVGWIKI" />
           </Link>
         </div>
       </div>

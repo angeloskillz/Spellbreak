@@ -33,6 +33,7 @@ import EquipmentBox from "../components/Equipment"
 import Desktop from "../components/DesktopTab"
 
 import MediaQuery from "react-responsive"
+import StickyFooter from 'react-sticky-footer'
 
 const gauntlets = [fire, frost, lightning, stone, toxic, wind]
 const classes = [
@@ -233,6 +234,36 @@ const IndexPage = props => (
         </div>
       </div>
     </MediaQuery>
+    <StickyFooter
+      className="footer"
+      bottomThreshold={50}
+      normalStyles={{
+        backgroundColor: '#F7B241',
+        padding: '1rem',
+        fontSize: '12px',
+        color: 'black',
+        textAlign: 'center',
+        marginTop: '50px',
+        fontWeight: '600'
+      }}
+      stickyStyles={{
+        backgroundColor: '#F7B241',
+        padding: '1rem',
+        fontSize: '12px',
+        color: 'black',
+        textAlign: 'center',
+        marginTop: '50px',
+        fontWeight:'800'
+      }}
+    >
+      <p>Copyright © 2019 SBWIKI</p>
+      <p>SBWIKI is not affiliated or part of Proletariat Inc. All Spellbreak copyrights and art assets belong to Proletariat Inc.</p>
+      Made by
+{' '}
+      <a href="https://twitter.com/AngeloCant1">AngeloC</a> & <a href="https://twitter.com/IGNSkillz4Killz">Skillz4Killz</a>
+      <p>Assets provided by Fireball</p>
+{' '}
+    </StickyFooter>
   </Layout>
 )
 

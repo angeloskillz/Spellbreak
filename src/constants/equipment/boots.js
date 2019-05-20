@@ -1,11 +1,5 @@
 export default [
   {
-    name: "Student Boots",
-    image: ``,
-    description: ["Run Speed: +10%."],
-    type: `Uncommon`,
-  },
-  {
     name: "Rubber Boots",
     image: ``,
     description: ["Immune: Toxic Puddles."],
@@ -16,6 +10,12 @@ export default [
     image: ``,
     description: ["On Ice: Rune Speed: +40%", "Immune: Ice Patches"],
     type: `Common`,
+  },
+  {
+    name: "Student Boots",
+    image: ``,
+    description: ["Run Speed: +10%."],
+    type: `Uncommon`,
   },
   {
     name: "Boots of the Cat",

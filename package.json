@@ -26,6 +26,7 @@
     "react-helmet": "^5.2.1",
     "react-modal": "^3.8.1",
     "react-responsive": "^6.1.2",
+    "react-sticky-footer": "0.1.0-rc3",
     "react-swipeable-views": "^0.13.3",
     "styled-components": "^4.2.0"
   },

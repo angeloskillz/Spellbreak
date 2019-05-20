@@ -37,6 +37,17 @@ const Icon2 = styled.img`
   margin-left: 11px;
   margin-top: 11px;
 `
+const Description = styled.h2`
+  font-family: Roboto;
+  font-weight: 800;
+  font-size: 14px;
+  text-align: center;
+  color: #daa54e;
+  margin-bottom: 16px;
+  padding-left: 16px;
+  padding-right: 16px;
+  text-transform: uppercase;
+`
 const SubDescription = styled.h2`
   font-family: Roboto;
   font-weight: normal;
@@ -63,16 +74,16 @@ export default props => (
     </Icons>
     <Title>{props.details.name}</Title>
     <SubDescription>{props.details.description.join(`\n`)}</SubDescription>
-    <SubDescription
-      className={props.details.type ? props.details.type.toLowerCase() : null}
-    >
-      {props.details.type}
-    </SubDescription>
     {props.details.cooldown ? (
       <SubDescription>Cooldown: {props.details.cooldown}</SubDescription>
     ) : null}
     {props.details.duration ? (
       <SubDescription>Duration: {props.details.duration}</SubDescription>
     ) : null}
+    <Description
+      className={props.details.type ? props.details.type.toLowerCase() : null}
+    >
+      {props.details.type}
+    </Description>
   </Class>
 )

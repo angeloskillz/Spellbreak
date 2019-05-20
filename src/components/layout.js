@@ -24,7 +24,7 @@ const Layout = ({ children }) => (
           description={data.site.siteMetadata.description}
           meta={[
             { name: 'description', content: data.site.siteMetadata.description },
-            { name: 'keywords', content: 'vainglory, wiki, vaingloriwiki, vainglory wiki, vgwiki, vg, vaingloryheroes' },
+            { name: 'keywords', content: 'spellbreak, wiki, spellbreakwiki, spellbreak wiki, sbwiki, sb' },
             { property: 'og:image', content: 'https://i.imgur.com/qBMkj19.png' },
             { name: "viewport", content: "width=device-width, initial-scale=1.0, viewport-fit=cover" }
           ]}
@@ -37,15 +37,14 @@ const Layout = ({ children }) => (
           <meta property="og:type" content="website" />
           <meta property="og:title" content="SBWIKI" />
           <meta property="og:description" content="A Spellbreak Wiki" />
-          <meta property="og:image" content="https://i.imgur.com/qBMkj19.png" />
+          <meta property="og:image" content="https://imgur.com/2q3zVoV" />
           <meta property="og:url" content="https://www.sbwiki.netlify.com" />
 
           <meta property="twitter:card" content="summary_large_image" />
           <meta property="twitter:url" content="https://vgwiki.netlify.com/" />
           <meta property="twitter:title" content="SBWIKI" />
           <meta property="twitter:description" content="A Spellbreak Wiki" />
-          <meta property="twitter:image" content="https://i.imgur.com/qBMkj19.png" />
-          <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+          <meta property="twitter:image" content="https://imgur.com/2q3zVoV" />
           <html lang="en" />
         </Helmet>
         <Header siteTitle={data.site.siteMetadata.title} />

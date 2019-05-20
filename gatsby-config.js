@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: `Spellbreak Wiki`,
     description: `The best Spellbreak wiki stats site.`,
-    author: `@gatsbyjs`,
+    author: `AngeloCant1 & Skillz4Killz`,
   },
   plugins: [
     {
@@ -25,15 +25,16 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `SBWIKI`,
+        short_name: `SBWIKI`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
-        display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        background_color: `#F7B241`,
+        theme_color: `#141b1e`,
+        display: `Fullscreen`,
+        icon: `src/images/icon.png`, // This path is relative to the root of the site.
       },
     },
+    'gatsby-plugin-offline',
     `gatsby-plugin-netlify-cms`,
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline

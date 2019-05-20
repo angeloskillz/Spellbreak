@@ -14,13 +14,23 @@ const Class = styled.div`
   margin-left: 16px;
   margin-top: 16px;
   cursor: pointer;
+  outline: none;
+
+    box-sizing: border-box;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
 `
 const Sun = styled.img`
   display: block;
   margin: 0 auto;
 `
 const Title = styled.h1`
-  font-family: "Roboto";
+  font-family: "QuadratSerial";
   font-weight: bold;
   font-size: 18px;
   text-align: center;
@@ -127,8 +137,8 @@ class Classbox extends React.Component {
 
   render() {
     return (
-      <div>
-        <Class onClick={this.handleOpenModal}>
+      <div tabIndex="0">
+        <Class onClick={this.handleOpenModal} tabIndex="0">
           <Sun src={require("../images/Sun.png")} />
           <Title>{this.props.name}</Title>
           <Icons>
@@ -153,7 +163,7 @@ class Classbox extends React.Component {
           </Icons>
           <SubDescription>{this.props.description}</SubDescription>
           <img src={require('../images/Divider.png')} style={{ width: '200px', display: 'block', margin: '0 auto', marginBottom: '24px' }} alt='divider' />
-          <div style={{ overflowY: 'auto', height: '300px'}}>
+          <div className='scrollable'>
           {this.props.stats.map((stat, index) => (
             <div key={index}>
               <ScrollGroup>

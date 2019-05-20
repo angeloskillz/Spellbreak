@@ -1,12 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import ReactModal from "react-modal"
-import Table from "@material-ui/core/Table"
-import TableBody from "@material-ui/core/TableBody"
-import TableCell from "@material-ui/core/TableCell"
-import TableHead from "@material-ui/core/TableHead"
-import TableRow from "@material-ui/core/TableRow"
-import Paper from "@material-ui/core/Paper"
+import Tables from 'react-bootstrap/Table';
 
 const Class = styled.div`
   position: relative;
@@ -18,6 +13,17 @@ const Class = styled.div`
   box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
   margin-left: 16px;
   margin-top: 16px;
+  cursor: pointer;
+  outline: none;
+
+    box-sizing: border-box;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
 `
 const Glyph = styled.img`
   position: relative;
@@ -27,12 +33,11 @@ const Glyph = styled.img`
   margin-right: auto;
 `
 const Title = styled.h1`
-  font-family: "Roboto";
+  font-family: "QuadratSerial";
   font-weight: bold;
   font-size: 18px;
   text-align: center;
   color: #fff;
-  text-shadow: 0px 3px 6px #000;
   text-transform: uppercase;
 `
 const Icon1 = styled.img`
@@ -54,6 +59,17 @@ const Icon2 = styled.img`
   margin-top: 66px;
   filter: blur(6px);
 `
+const Description = styled.h2`
+  font-family: Roboto;
+  font-weight: 800;
+  font-size: 16px;
+  text-align: center;
+  color: #daa54e;
+  margin-bottom: 16px;
+  padding-left: 16px;
+  padding-right: 16px;
+`
+
 const SubDescription = styled.h2`
   font-family: Roboto;
   font-weight: normal;
@@ -62,6 +78,17 @@ const SubDescription = styled.h2`
   text-align: center;
   color: #fff;
   margin-bottom: 16px;
+  padding-left: 16px;
+  padding-right: 16px;
+`
+const Stats = styled.h3`
+  font-family: Roboto;
+  font-weight: normal;
+  font-style: italic;
+  font-size: 14px;
+  text-align: center;
+  color: #fff;
+  margin-bottom: 6px;
   padding-left: 16px;
   padding-right: 16px;
 `
@@ -94,7 +121,7 @@ class Gauntletbox extends React.Component {
       }
     }
     return (
-      <div>
+      <div tabIndex="0">
         <Class onClick={this.handleOpenModal}>
           <Icon2
             src={require(`../images/Gauntlets/${this.props.image}.png`)}
@@ -116,32 +143,39 @@ class Gauntletbox extends React.Component {
           onRequestClose={this.handleCloseModal}
           shouldCloseOnOverlayClick={true}
         >
-          <SubDescription>{this.props.spellname}</SubDescription>
+          <div className='scrollableg'>
+          <Description>{this.props.spellname}</Description>
           <SubDescription>{this.props.description}</SubDescription>
-          <Paper>
-            <Table style={{ width: "300px" }}>
-              <TableHead>
-                <TableRow style={{}}>
-                  <TableCell align="right">Rarities</TableCell>
-                  {this.props.stats.map((stat, index) => (
-                    <TableCell align="right" key={index}>
-                      {stat.type}
-                    </TableCell>
-                  ))}
-                </TableRow>
-              </TableHead>
-              <TableBody>
-                {rows.map((row, index) => (
-                  <TableRow key={index}>
-                    {row.map((item, itemIndex) => (
-                      <TableCell key={itemIndex}>{item}</TableCell>
-                    ))}
-                  </TableRow>
+          <Tables striped bordered hover className="Tableclass">
+            <thead>
+              <tr>
+                <th>Rarity</th>
+                {this.props.stats.map((stat, index) => (
+                  <th key={index}>{stat.type}</th>
                 ))}
-              </TableBody>
-            </Table>
-          </Paper>
-          <button onClick={this.handleCloseModal}>Close Modal</button>
+              </tr>
+            </thead>
+            <tbody>
+              {rows.map((row, index) => (
+                <tr key={index} className={index % 2 === 0 ? 'striped' : ''}>
+                  {row.map((item, itemIndex) => (
+                    <td key={itemIndex}>{item}</td>
+                  ))}
+                </tr>
+              ))}
+            </tbody>
+          </Tables>
+          <Description>{this.props.ultimate.name}</Description>
+          <SubDescription>{this.props.ultimate.description}</SubDescription>
+          {this.props.ultimate.details.map((detail, index) => (
+            <Stats key={index}>
+              {detail.name}: {detail.value}
+            </Stats>
+          ))}
+            <div className='gradientmodalg'></div>
+          </div>
+            <button onClick={this.handleCloseModal}>CLOSE</button>
+          
         </ReactModal>
       </div>
     )
@@ -150,11 +184,55 @@ class Gauntletbox extends React.Component {
 
 export default Gauntletbox
 
-/*
+/*<Tables striped bordered hover className="Tableclass">
+  <thead>
+    <tr>
+      <th>Rarity</th>
+      {this.props.stats.map((stat, index) => (
+      <th key={index}>{stat.type}</th>
+      ))}
+    </tr>
+  </thead>
+  <tbody>
+  {rows.map((row, index) => (
+    <tr key={index} className={index % 2 === 0 ? 'striped' : ''}>
+    {row.map((item, itemIndex) => (
+      <td key={itemIndex}>{item}</td>
+      ))}
+    </tr>
+    ))}
+  </tbody>
+</Tables>
+
+<Paper className="container">
+            <Table>
+              <TableHead style={{maxWidth: '125px', minWidth:'125px', padding: '0 !important', overflowX: 'auto', whiteSpace:'nowrap'}}>
+                <TableRow style={{}}>
+                  <StyledTableCell align="right">Rarities</StyledTableCell>
+                  {this.props.stats.map((stat, index) => (
+                    <StyledTableCell align="right" key={index}>
+                      {stat.type}
+                    </StyledTableCell>
+                  ))}
+                </TableRow>
+              </TableHead>
+              <TableBody>
+                {rows.map((row, index) => (
+                  <TableRow key={index}>
+                    {row.map((item, itemIndex) => (
+                      <StyledTableCell key={itemIndex}>{item}</StyledTableCell>
+                    ))}
+                  </TableRow>
+                ))}
+              </TableBody>
+            </Table>
+          </Paper>
+
           <SubDescription>Ultimate: {this.props.ultimate.name}</SubDescription>
           <SubDescription>{this.props.ultimate.description}</SubDescription>
           {this.props.ultimate.details.map((detail, index) => (
             <SubDescription key={index}>
               {detail.name}: {detail.value}
             </SubDescription>
-          ))} */
+          ))}
+          */
