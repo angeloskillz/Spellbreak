@@ -12,10 +12,6 @@ const Class = styled.div`
   margin-left: 16px;
   margin-top: 16px;
 `
-const Sun = styled.img`
-  display: block;
-  margin: 0 auto;
-`
 const Title = styled.h1`
   font-family: "Roboto";
   font-weight: bold;
@@ -35,10 +31,10 @@ const Icon1 = styled.img`
 const Icon2 = styled.img`
   position: absolute;
   width: 60px;
-height: 60px;
-border: 1px solid #fec470;
-margin-left: 11px;
-margin-top: 11px;
+  height: 60px;
+  border: 1px solid #fec470;
+  margin-left: 11px;
+  margin-top: 11px;
 `
 const SubDescription = styled.h2`
   font-family: Roboto;
@@ -50,16 +46,28 @@ const SubDescription = styled.h2`
   margin-bottom: 16px;
   padding-left: 16px;
   padding-right: 16px;
+  white-space: pre-wrap;
 `
 export default props => (
-    <Class>
-      <Icons>
-        <Icon2 src={require(`../images/Equipment/${props.details.name}.png`)} alt={props.details.name} />
-        <Icon1 src={require(`../images/Equipment.png`)} alt={props.details.name} />
-      </Icons>
-      <Title>{props.details.name}</Title>
-      <SubDescription>{props.details.description.join(`\n`)}</SubDescription>
-      <SubDescription>{props.details.cooldown}</SubDescription>
-      <SubDescription>{props.details.duration}</SubDescription>
-    </Class>
+  <Class>
+    <Icons>
+      <Icon2
+        src={require(`../images/Equipment/${props.details.name}.png`)}
+        alt={props.details.name}
+      />
+      <Icon1
+        src={require(`../images/Equipment.png`)}
+        alt={props.details.name}
+      />
+    </Icons>
+    <Title>{props.details.name}</Title>
+    <SubDescription>{props.details.description.join(`\n`)}</SubDescription>
+    <SubDescription>{props.details.type}</SubDescription>
+    {props.details.cooldown ? (
+      <SubDescription>Cooldown: {props.details.cooldown}</SubDescription>
+    ) : null}
+    {props.details.duration ? (
+      <SubDescription>Duration: {props.details.duration}</SubDescription>
+    ) : null}
+  </Class>
 )

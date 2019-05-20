@@ -5,6 +5,7 @@ export default [
     description: ["Jumps up, then you slowly fall down for a duration."],
     cooldown: "12 Seconds",
     duration: "3.7 Seconds",
+    type: `Uncommon`,
   },
   {
     name: "Invisibility Rune",
@@ -14,6 +15,7 @@ export default [
     ],
     cooldown: "10 Seconds",
     duration: "10 Seconds",
+    type: `Uncommon`,
   },
   {
     name: "Springstep",
@@ -21,6 +23,7 @@ export default [
     description: ["Leap into the air."],
     cooldown: "5 Seconds",
     duration: "-",
+    type: `Uncommon`,
   },
   {
     name: "Flight Rune",
@@ -30,6 +33,7 @@ export default [
     ],
     cooldown: "25 Seconds",
     duration: "5 Seconds",
+    type: `Rare`,
   },
   {
     name: "Teleport Rune",
@@ -39,6 +43,7 @@ export default [
     ],
     cooldown: "20 Seconds",
     duration: "-",
+    type: `Rare`,
   },
   {
     name: "Chronomaster Rune",
@@ -48,6 +53,7 @@ export default [
     ],
     cooldown: "25 Seconds",
     duration: "3 Seconds",
+    type: `Rare`,
   },
   {
     name: "Shadowstep Rune",
@@ -57,6 +63,7 @@ export default [
     ],
     cooldown: "8 Seconds",
     duration: "2.5 Seconds",
+    type: `Epic`,
   },
   {
     name: "Wolf's Eye Blood Rune",
@@ -66,6 +73,7 @@ export default [
     ],
     cooldown: "12 Seconds",
     duration: "6 Seconds",
+    type: `Epic`,
   },
   {
     name: "Blink Rune",
@@ -73,6 +81,7 @@ export default [
     description: ["Dash forward a short distance. 3 Charges. Attack lock out."],
     cooldown: "3 Seconds",
     duration: "-",
+    type: `Epic`,
   },
   {
     name: "Dash Rune",
@@ -80,5 +89,6 @@ export default [
     description: ["Quickly dash in the direction your'e moving."],
     cooldown: "5 Seconds",
     duration: "1 Seconds",
+    type: `Epic`,
   },
 ]
