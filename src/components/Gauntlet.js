@@ -1,6 +1,15 @@
 import React from "react"
 import styled from "styled-components"
 import ReactModal from "react-modal"
+import PropTypes from 'prop-types';
+import { withStyles } from '@material-ui/core/styles';
+import Table from '@material-ui/core/Table';
+import TableBody from '@material-ui/core/TableBody';
+import TableCell from '@material-ui/core/TableCell';
+import TableHead from '@material-ui/core/TableHead';
+import TableRow from '@material-ui/core/TableRow';
+import Paper from '@material-ui/core/Paper';
+
 
 const Class = styled.div`
   position: relative;
@@ -103,6 +112,46 @@ class Gauntletbox extends React.Component {
           onRequestClose={this.handleCloseModal}
           shouldCloseOnOverlayClick={true}
         >
+          <SubDescription>{this.props.spellname}</SubDescription>
+          <SubDescription>{this.props.description}</SubDescription>
+          <Paper>
+            <Table style={{width: '300px' }}>
+              <TableHead>
+                <TableRow style={{}}>
+                  {this.props.stats.map((stat, index) => (
+                      <TableCell align="right" key={index}>{stat.type}</TableCell>
+          ))}
+                </TableRow>
+              </TableHead>
+              <TableBody>
+                <TableRow>
+                  {this.props.stats.map((detail, detailIndex) => (
+                    <TableCell component="th" scope="row" key={detailIndex}>{detail.name}
+                    </TableCell>
+                  ))}
+                  {this.props.stats.map((stat, index) => (
+                    <div key={index}>
+                  {stat.details.map((detail, detailIndex) => (
+                    <TableCell align="right" key={detailIndex}>{detail.value}</TableCell>
+              ))}
+                    </div>
+                  ))}
+                  </TableRow>
+              </TableBody>
+            </Table>
+          </Paper>
+          <button onClick={this.handleCloseModal}>Close Modal</button>
+        </ReactModal>
+      </div>
+    )
+  }
+}
+
+export default Gauntletbox
+
+
+/*
+
           <SubDescription>{this.props.description}</SubDescription>
           <SubDescription>{this.props.spellname}</SubDescription>
           {this.props.stats.map((stat, index) => (
@@ -122,12 +171,4 @@ class Gauntletbox extends React.Component {
             <SubDescription key={index}>
               {detail.name}: {detail.value}
             </SubDescription>
-          ))}
-          <button onClick={this.handleCloseModal}>Close Modal</button>
-        </ReactModal>
-      </div>
-    )
-  }
-}
-
-export default Gauntletbox
+          ))} */
