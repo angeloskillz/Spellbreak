@@ -3,6 +3,8 @@ import styled from "styled-components"
 import "./equipment.css"
 
 const Class = styled.div`
+display: flex;
+  flex-direction: column;
   position: relative;
   width: 280px;
   height: auto;
@@ -21,6 +23,7 @@ const Title = styled.h1`
   color: #fff;
   text-shadow: 0px 3px 6px #000;
   text-transform: uppercase;
+  margin-bottom: 0;
 `
 const Icons = styled.div`
   text-align: center;
@@ -43,7 +46,7 @@ const Description = styled.h2`
   font-size: 14px;
   text-align: center;
   color: #daa54e;
-  margin-bottom: 16px;
+  margin-top: auto;
   padding-left: 16px;
   padding-right: 16px;
   text-transform: uppercase;
