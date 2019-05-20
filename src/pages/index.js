@@ -65,7 +65,7 @@ const IndexPage = props => (
       <div className="HeroGroup">
         <h1>SPELLBREAK WIKI</h1>
         <img src={require('../images/Divider.png')} alt='divider' style={{width: '300px'}}/>
-        <p>CLSED ALPHA</p>
+        <p>CLOSED ALPHA</p>
       </div>
     </div>
     <Desktop></Desktop>
