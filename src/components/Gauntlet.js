@@ -1,15 +1,14 @@
 import React from "react"
 import styled from "styled-components"
 import ReactModal from "react-modal"
-import PropTypes from 'prop-types';
-import { withStyles } from '@material-ui/core/styles';
-import Table from '@material-ui/core/Table';
-import TableBody from '@material-ui/core/TableBody';
-import TableCell from '@material-ui/core/TableCell';
-import TableHead from '@material-ui/core/TableHead';
-import TableRow from '@material-ui/core/TableRow';
-import Paper from '@material-ui/core/Paper';
-
+import PropTypes from "prop-types"
+import { withStyles } from "@material-ui/core/styles"
+import Table from "@material-ui/core/Table"
+import TableBody from "@material-ui/core/TableBody"
+import TableCell from "@material-ui/core/TableCell"
+import TableHead from "@material-ui/core/TableHead"
+import TableRow from "@material-ui/core/TableRow"
+import Paper from "@material-ui/core/Paper"
 
 const Class = styled.div`
   position: relative;
@@ -89,6 +88,13 @@ class Gauntletbox extends React.Component {
   }
 
   render() {
+    const rows = []
+    for (const stat of this.props.stats) {
+      for (const [detailIndex, detail] of stat.details.entries()) {
+        if (!rows[detailIndex]) rows[detailIndex] = [detail.name]
+        if (rows[detailIndex]) rows[detailIndex].push(detail.value)
+      }
+    }
     return (
       <div>
         <Class onClick={this.handleOpenModal}>
@@ -115,28 +121,25 @@ class Gauntletbox extends React.Component {
           <SubDescription>{this.props.spellname}</SubDescription>
           <SubDescription>{this.props.description}</SubDescription>
           <Paper>
-            <Table style={{width: '300px' }}>
+            <Table style={{ width: "300px" }}>
               <TableHead>
                 <TableRow style={{}}>
+                  <TableCell align="right">Rarities</TableCell>
                   {this.props.stats.map((stat, index) => (
-                      <TableCell align="right" key={index}>{stat.type}</TableCell>
-          ))}
+                    <TableCell align="right" key={index}>
+                      {stat.type}
+                    </TableCell>
+                  ))}
                 </TableRow>
               </TableHead>
               <TableBody>
-                <TableRow>
-                  {this.props.stats.map((detail, detailIndex) => (
-                    <TableCell component="th" scope="row" key={detailIndex}>{detail.name}
-                    </TableCell>
-                  ))}
-                  {this.props.stats.map((stat, index) => (
-                    <div key={index}>
-                  {stat.details.map((detail, detailIndex) => (
-                    <TableCell align="right" key={detailIndex}>{detail.value}</TableCell>
-              ))}
-                    </div>
-                  ))}
+                {rows.map((row, index) => (
+                  <TableRow key={index}>
+                    {row.map((item, itemIndex) => (
+                      <TableCell key={itemIndex}>{item}</TableCell>
+                    ))}
                   </TableRow>
+                ))}
               </TableBody>
             </Table>
           </Paper>
@@ -149,22 +152,7 @@ class Gauntletbox extends React.Component {
 
 export default Gauntletbox
 
-
 /*
-
-          <SubDescription>{this.props.description}</SubDescription>
-          <SubDescription>{this.props.spellname}</SubDescription>
-          {this.props.stats.map((stat, index) => (
-            <div key={index}>
-              <SubDescription>Type: {stat.type}</SubDescription>
-              <SubDescription>Details:</SubDescription>
-              {stat.details.map((detail, detailIndex) => (
-                <SubDescription key={detailIndex}>
-                  {detail.name}: {detail.value}
-                </SubDescription>
-              ))}
-            </div>
-          ))}
           <SubDescription>Ultimate: {this.props.ultimate.name}</SubDescription>
           <SubDescription>{this.props.ultimate.description}</SubDescription>
           {this.props.ultimate.details.map((detail, index) => (
