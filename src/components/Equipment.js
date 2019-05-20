@@ -1,5 +1,6 @@
 import React from "react"
 import styled from "styled-components"
+import "./equipment.css"
 
 const Class = styled.div`
   position: relative;
@@ -62,7 +63,11 @@ export default props => (
     </Icons>
     <Title>{props.details.name}</Title>
     <SubDescription>{props.details.description.join(`\n`)}</SubDescription>
-    <SubDescription>{props.details.type}</SubDescription>
+    <SubDescription
+      className={props.details.type ? props.details.type.toLowerCase() : null}
+    >
+      {props.details.type}
+    </SubDescription>
     {props.details.cooldown ? (
       <SubDescription>Cooldown: {props.details.cooldown}</SubDescription>
     ) : null}

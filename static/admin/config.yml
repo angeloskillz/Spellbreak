@@ -5,7 +5,8 @@ backend:
 media_folder: static/img
 public_folder: /img
 site_url: https://sbwiki.netlify.com
-logo_url: https://cdn.discordapp.com/attachments/416884846611398667/579046626564374538/Group_8.png
+logo_url: https://sbwiki.netlify.com/images/Sun.png
+show_preview_links: false
 
 collections:
   - name: "lore"

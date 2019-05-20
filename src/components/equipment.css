@@ -1,0 +1,19 @@
+.common {
+  color: grey;
+}
+
+.uncommon {
+  color: white;
+}
+
+.rare {
+  color: blue;
+}
+
+.epic {
+	color: purple
+}
+
+.legendary {
+	color: orange
+}
