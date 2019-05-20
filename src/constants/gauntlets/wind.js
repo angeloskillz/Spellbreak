@@ -1,5 +1,5 @@
 export default {
-  name: `Wind Shear`,
+  name: `Wind Gauntlet`,
   spellname: `Shockwave`,
   description: `Projectile, damage on hit. Shoot own feet for airborne jump. First cast time is slow.`,
   image: `Wind-Gauntlet`,
