@@ -32,6 +32,7 @@ import boots from "../constants/equipment/boots"
 import consumables from "../constants/equipment/consumables"
 import runes from "../constants/equipment/runes"
 import EquipmentBox from "../components/Equipment"
+import AdComponent from "./ad";
 
 const StyledAppBar = withStyles({
   root: {
@@ -129,6 +130,7 @@ class FullWidthTabs extends React.Component {
               <StyledTab label="EQUIPMENT" className="button" />
             </StyledTabs>
           </StyledAppBar>
+              <AdComponent></AdComponent>
           {value === 0 && (
             <TabContainer>
               <div className="Selectan">
@@ -257,7 +259,7 @@ class FullWidthTabs extends React.Component {
                   ))}
                 </div>
               </div>
-
+              <AdComponent></AdComponent>
               <div className="Selectan">
                 <h1>Consumables</h1>
               </div>
@@ -301,6 +303,7 @@ class FullWidthTabs extends React.Component {
               </div>
             </TabContainer>
           )}
+          <AdComponent></AdComponent>
         </div>
       </MediaQuery>
     )

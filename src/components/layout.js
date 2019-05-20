@@ -45,6 +45,7 @@ const Layout = ({ children }) => (
           <meta property="twitter:title" content="SBWIKI" />
           <meta property="twitter:description" content="A Spellbreak Wiki" />
           <meta property="twitter:image" content="https://i.imgur.com/2q3zVoV.png" />
+          <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
           <html lang="en" />
         </Helmet>
         <Header siteTitle={data.site.siteMetadata.title} />

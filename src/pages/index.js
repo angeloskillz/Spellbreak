@@ -34,6 +34,7 @@ import Desktop from "../components/DesktopTab"
 
 import MediaQuery from "react-responsive"
 import StickyFooter from 'react-sticky-footer'
+import AdComponent from "../components/ad";
 
 const gauntlets = [fire, frost, lightning, stone, toxic, wind]
 const classes = [
@@ -75,6 +76,7 @@ const IndexPage = props => (
     </div>
     <Desktop />
     <MediaQuery query="(max-width: 720px)">
+      <AdComponent></AdComponent>
       <div className="Selectan">
         <h1>Select a Class</h1>
         <img
@@ -132,7 +134,7 @@ const IndexPage = props => (
           ))}
         </div>
       </div>
-
+      <AdComponent></AdComponent>
       <div className="Selectan">
         <h1>Amulets</h1>
       </div>
@@ -193,6 +195,7 @@ const IndexPage = props => (
           ))}
         </div>
       </div>
+      <AdComponent></AdComponent>
       <div className="Selectan">
         <h1>Consumables</h1>
       </div>
