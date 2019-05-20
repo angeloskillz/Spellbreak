@@ -3,6 +3,7 @@ module.exports = {
     title: `Spellbreak Wiki`,
     description: `The best Spellbreak wiki stats site.`,
     author: `AngeloCant1 & Skillz4Killz`,
+    url: "https://www.sbwiki.netlify.com"
   },
   plugins: [
     {
