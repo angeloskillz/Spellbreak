@@ -16,7 +16,6 @@ body {
   margin: 0;
   width: 100%;
   height: 100%;
-  overflow-x: hidden;
 }
  
 #___gatsby {
@@ -87,10 +86,11 @@ a {
     font-family: "Roboto";
     font-size: 50px;
     margin:0;
+    margin-bottom: 5px;
     color: rgba(255, 255, 255, 0.808);
     line-height: 1.2;
    -webkit-font-smoothing: antialiased;
-   width: 460px
+   text-align: center;
   }
   
   .HeroGroup p{

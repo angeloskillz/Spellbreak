@@ -2,8 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import MediaQuery from 'react-responsive'
-
-import SwipeableViews from 'react-swipeable-views';
 import AppBar from '@material-ui/core/AppBar';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
@@ -45,12 +43,22 @@ const StyledAppBar = withStyles({
     },
 })(AppBar)
 
+const StyledTabs = withStyles({
+    indicator: {
+        backgroundColor: '#daa54e',
+        color: 'white'
+    },
+})(Tabs)
+
 const StyledTab = withStyles({
     root: {
-        color: 'white',
+        color: 'grey',
     },
     selected:{
         border: '2px solid #daa54e',
+    },
+    label: {
+        color: 'white',
     },
 })(Tab)
 
@@ -105,29 +113,28 @@ class FullWidthTabs extends React.Component {
 
     render() {
         const { theme } = this.props;
-
         const { value } = this.state;
 
         return (
             <MediaQuery query="(min-width: 721px)">
             <div className={classes.root}>
                 <StyledAppBar position="static" color="default">
-                    <Tabs
+                    <StyledTabs
                         value={this.state.value}
                         onChange={this.handleChange}
                         indicatorColor="primary"
                         textColor="primary"
-                        variant="fullWidth"
+                            variant="fullWidth"
                     >
-                        <StyledTab label="CLASSES" style={{color: 'white'}}/>
-                        <StyledTab label="GAUNTLETS" />
-                        <StyledTab label="EQUIPMENT" />
-                    </Tabs>
+                            <StyledTab label="CLASSES"  className="button" />
+                        <StyledTab label="GAUNTLETS"  className="button"/>
+                            <StyledTab label="EQUIPMENT" className="button"/>
+                        </StyledTabs>
                 </StyledAppBar>
-                    <TabContainer dir={theme.direction}>
+                    {value === 0 && <TabContainer>
                         <div className="Selectan">
                             <h1>Select a Class</h1>
-                            <img src={require('../images/Divider.png')} style={{ width: '200px', display: 'block', margin: '0 auto', marginBottom: '24px' }} alt='divider' />
+                            <img src={require('../images/Divider2.png')} style={{ width: '200px', display: 'block', margin: '0 auto', marginBottom: '24px' }} alt='divider' />
                         </div>
                         <div className="CardboxGroupScroll">
                             <div className="CardboxGroup">
@@ -142,12 +149,12 @@ class FullWidthTabs extends React.Component {
                                 ))}
                             </div>
                         </div>
-                    </TabContainer>
-                    <TabContainer dir={theme.direction}>
+                    </TabContainer>}
+                    {value === 1 && <TabContainer>
                         <div className="Selectan">
-                        <h1>Select a Gauntlet</h1>
-                    </div>
-                        <img src={require('../images/Divider.png')} style={{ width: '200px', display: 'block', margin: '0 auto', marginBottom: '24px' }} alt='divider' />
+                            <h1>Select a Gauntlet</h1>
+                        </div>
+                        <img src={require('../images/Divider2.png')} style={{ width: '200px', display: 'block', margin: '0 auto', marginBottom: '24px' }} alt='divider' />
                         <div className="CardboxGroupScroll">
                             <div className="CardboxGroup">
                                 {gauntlets.map((gauntlet, index) => (
@@ -166,11 +173,12 @@ class FullWidthTabs extends React.Component {
                             </div>
                         </div>
                     </TabContainer>
-                    <TabContainer dir={theme.direction}>
+                    }
+                    {value === 2 && <TabContainer>
                         <div className="Selectan">
                             <h1>Amulets</h1>
                         </div>
-                        <img src={require('../images/Divider.png')} style={{ width: '200px', display: 'block', margin: '0 auto', marginBottom: '24px' }} alt='divider' />
+                        <img src={require('../images/Divider2.png')} style={{ width: '200px', display: 'block', margin: '0 auto', marginBottom: '24px' }} alt='divider' />
                         <div className="CardboxGroupScroll">
                             <div className="CardboxGroup">
                                 {amulets.map((equipment, index) => (
@@ -182,7 +190,7 @@ class FullWidthTabs extends React.Component {
                         <div className="Selectan">
                             <h1>Belts</h1>
                         </div>
-                        <img src={require('../images/Divider.png')} style={{ width: '200px', display: 'block', margin: '0 auto', marginBottom: '24px' }} alt='divider' />
+                        <img src={require('../images/Divider2.png')} style={{ width: '200px', display: 'block', margin: '0 auto', marginBottom: '24px' }} alt='divider' />
                         <div className="CardboxGroupScroll">
                             <div className="CardboxGroup">
                                 {belts.map((equipment, index) => (
@@ -194,7 +202,7 @@ class FullWidthTabs extends React.Component {
                         <div className="Selectan">
                             <h1>Boots</h1>
                         </div>
-                        <img src={require('../images/Divider.png')} style={{ width: '200px', display: 'block', margin: '0 auto', marginBottom: '24px' }} alt='divider' />
+                        <img src={require('../images/Divider2.png')} style={{ width: '200px', display: 'block', margin: '0 auto', marginBottom: '24px' }} alt='divider' />
                         <div className="CardboxGroupScroll">
                             <div className="CardboxGroup">
                                 {boots.map((equipment, index) => (
@@ -206,7 +214,7 @@ class FullWidthTabs extends React.Component {
                         <div className="Selectan">
                             <h1>Consumables</h1>
                         </div>
-                        <img src={require('../images/Divider.png')} style={{ width: '200px', display: 'block', margin: '0 auto', marginBottom: '24px' }} alt='divider' />
+                        <img src={require('../images/Divider2.png')} style={{ width: '200px', display: 'block', margin: '0 auto', marginBottom: '24px' }} alt='divider' />
                         <div className="CardboxGroupScroll">
                             <div className="CardboxGroup">
                                 {consumables.map((equipment, index) => (
@@ -218,7 +226,7 @@ class FullWidthTabs extends React.Component {
                         <div className="Selectan">
                             <h1>Runes</h1>
                         </div>
-                        <img src={require('../images/Divider.png')} style={{ width: '200px', display: 'block', margin: '0 auto', marginBottom: '24px' }} alt='divider' />
+                        <img src={require('../images/Divider2.png')} style={{ width: '200px', display: 'block', margin: '0 auto', marginBottom: '24px' }} alt='divider' />
                         <div className="CardboxGroupScroll">
                             <div className="CardboxGroup">
                                 {runes.map((equipment, index) => (
@@ -227,6 +235,7 @@ class FullWidthTabs extends React.Component {
                             </div>
                         </div>
                     </TabContainer>
+                    }
                 </div>
             </MediaQuery>
         );

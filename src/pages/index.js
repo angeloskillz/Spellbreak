@@ -72,7 +72,7 @@ const IndexPage = props => (
     <MediaQuery query="(max-width: 720px)">
     <div className="Selectan">
       <h1>Select a Class</h1>
-      <img src={require('../images/Divider.png')} style={{ width: '200px', display: 'block', margin: '0 auto', marginBottom: '24px' }} alt='divider'/>
+      <img src={require('../images/Divider2.png')} style={{ width: '200px', display: 'block', margin: '0 auto', marginBottom: '24px' }} alt='divider'/>
     </div>
     <div className="CardboxGroupScroll">
       <div className="CardboxGroup">
@@ -91,7 +91,7 @@ const IndexPage = props => (
     <div className="Selectan">
       <h1>Select a Gauntlet</h1>
     </div>
-    <img src={require('../images/Divider.png')} style={{ width: '200px', display: 'block', margin: '0 auto', marginBottom: '24px' }} alt='divider' />
+    <img src={require('../images/Divider2.png')} style={{ width: '200px', display: 'block', margin: '0 auto', marginBottom: '24px' }} alt='divider' />
     <div className="CardboxGroupScroll">
       <div className="CardboxGroup">
         {gauntlets.map((gauntlet, index) => (
@@ -113,7 +113,7 @@ const IndexPage = props => (
     <div className="Selectan">
       <h1>Amulets</h1>
     </div>
-    <img src={require('../images/Divider.png')} style={{ width: '200px', display: 'block', margin: '0 auto', marginBottom: '24px' }} alt='divider' />
+    <img src={require('../images/Divider2.png')} style={{ width: '200px', display: 'block', margin: '0 auto', marginBottom: '24px' }} alt='divider' />
     <div className="CardboxGroupScroll">
       <div className="CardboxGroup">
         {amulets.map((equipment, index) => (
@@ -125,7 +125,7 @@ const IndexPage = props => (
     <div className="Selectan">
       <h1>Belts</h1>
     </div>
-    <img src={require('../images/Divider.png')} style={{ width: '200px', display: 'block', margin: '0 auto', marginBottom: '24px' }} alt='divider' />
+    <img src={require('../images/Divider2.png')} style={{ width: '200px', display: 'block', margin: '0 auto', marginBottom: '24px' }} alt='divider' />
     <div className="CardboxGroupScroll">
       <div className="CardboxGroup">
         {belts.map((equipment, index) => (
@@ -137,7 +137,7 @@ const IndexPage = props => (
     <div className="Selectan">
       <h1>Boots</h1>
     </div>
-    <img src={require('../images/Divider.png')} style={{ width: '200px', display: 'block', margin: '0 auto', marginBottom: '24px' }} alt='divider' />
+    <img src={require('../images/Divider2.png')} style={{ width: '200px', display: 'block', margin: '0 auto', marginBottom: '24px' }} alt='divider' />
     <div className="CardboxGroupScroll">
       <div className="CardboxGroup">
         {boots.map((equipment, index) => (
@@ -149,7 +149,7 @@ const IndexPage = props => (
     <div className="Selectan">
       <h1>Consumables</h1>
     </div>
-    <img src={require('../images/Divider.png')} style={{ width: '200px', display: 'block', margin: '0 auto', marginBottom: '24px' }} alt='divider' />
+    <img src={require('../images/Divider2.png')} style={{ width: '200px', display: 'block', margin: '0 auto', marginBottom: '24px' }} alt='divider' />
     <div className="CardboxGroupScroll">
       <div className="CardboxGroup">
         {consumables.map((equipment, index) => (
@@ -161,7 +161,7 @@ const IndexPage = props => (
     <div className="Selectan">
       <h1>Runes</h1>
     </div>
-    <img src={require('../images/Divider.png')} style={{ width: '200px', display: 'block', margin: '0 auto', marginBottom: '24px' }} alt='divider' />
+    <img src={require('../images/Divider2.png')} style={{ width: '200px', display: 'block', margin: '0 auto', marginBottom: '24px' }} alt='divider' />
     <div className="CardboxGroupScroll">
       <div className="CardboxGroup">
         {runes.map((equipment, index) => (

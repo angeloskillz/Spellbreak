@@ -107,22 +107,21 @@ const Scrolldescription = styled.h2`
 
 class Classbox extends React.Component {
   constructor() {
-    super()
+    super();
     this.state = {
-      showModal: false,
-    }
+      modalIsOpen: false
+    };
 
-    this.handleOpenModal = this.handleOpenModal.bind(this)
-    this.handleCloseModal = this.handleCloseModal.bind(this)
+    this.handleOpenModal = this.handleOpenModal.bind(this);
+    this.handleCloseModal = this.handleCloseModal.bind(this);
   }
 
   handleOpenModal() {
-    console.log("opening")
-    this.setState({ showModal: true })
+    this.setState({ showModal: true });
   }
 
   handleCloseModal() {
-    this.setState({ showModal: false })
+    this.setState({ showModal: false });
   }
 
   render() {
@@ -141,8 +140,9 @@ class Classbox extends React.Component {
           isOpen={this.state.showModal}
           className="Modal"
           overlayClassName="Overlay"
-          onRequestClose={this.handleCloseModal}
           shouldCloseOnOverlayClick={true}
+          onRequestClose={this.handleCloseModal}
+          shouldReturnFocusAfterClose={true}
         >
           <Sun src={require("../images/Sun.png")} />
           <Title>{this.props.name}</Title>
@@ -166,8 +166,8 @@ class Classbox extends React.Component {
             </div>
           ))}
             <div className='gradientmodal'></div>
-            </div>
-          <button onClick={this.handleCloseModal} style={{position:'absolute', top:'0', right:'5px', width:'30px'}}>X</button>
+          </div>
+          <button onClick={this.handleCloseModal} style={{ position: 'absolute', top: '0', right: '5px', width: '30px' }}>X</button>
         </ReactModal>
       </Class>
     )
