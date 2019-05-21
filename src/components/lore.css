@@ -1,0 +1,22 @@
+.lore {
+  color: white;
+  text-align: center;
+}
+
+.loreTitle {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.loreDate {
+  text-align: center;
+}
+
+.loreDescription {
+}
+
+.loreContent {
+  text-align: left;
+  margin-left: 20%;
+  margin-right: 20%;
+}
