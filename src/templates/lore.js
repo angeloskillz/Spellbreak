@@ -14,7 +14,7 @@ const BlogPost = ({ data }) => {
         description={post.frontmatter.description}
         date={post.frontmatter.date}
         helmet={
-          <Helmet titleTemplate="%s | Blog">
+          <Helmet titleTemplate="%s | Lore">
             <title>{post.frontmatter.title}</title>
             <meta name="description" content={post.frontmatter.description} />
           </Helmet>
