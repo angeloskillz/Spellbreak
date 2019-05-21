@@ -195,7 +195,6 @@ const IndexPage = props => (
           ))}
         </div>
       </div>
-      <AdComponent></AdComponent>
       <div className="Selectan">
         <h1>Consumables</h1>
       </div>
