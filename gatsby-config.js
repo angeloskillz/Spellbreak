@@ -3,7 +3,7 @@ module.exports = {
     title: `Spellbreak Wiki`,
     description: `The best Spellbreak wiki stats site.`,
     author: `AngeloCant1 & Skillz4Killz`,
-    url: "https://www.sbwiki.netlify.com"
+    url: "https://www.sbwiki.netlify.com",
   },
   plugins: [
     {
@@ -11,6 +11,13 @@ module.exports = {
       options: {
         path: `${__dirname}/src/images/`,
         name: "images",
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/content/`,
+        name: "content",
       },
     },
     `gatsby-plugin-react-helmet`,
@@ -35,7 +42,13 @@ module.exports = {
         icon: `src/images/icon.png`, // This path is relative to the root of the site.
       },
     },
-    'gatsby-plugin-offline',
+    {
+      resolve: "gatsby-transformer-remark",
+      options: {
+        plugins: [],
+      },
+    },
+    "gatsby-plugin-offline",
     `gatsby-plugin-netlify-cms`,
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
