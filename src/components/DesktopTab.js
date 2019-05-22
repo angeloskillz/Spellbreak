@@ -79,7 +79,7 @@ const classes = [
 
 function TabContainer({ children, dir }) {
   return (
-    <Typography component="div" dir={dir} style={{ padding: 8 * 3 }}>
+    <Typography component="div" dir={dir} style={{ padding: 8 * 3, background:'#141b1e' }}>
       {children}
     </Typography>
   )
