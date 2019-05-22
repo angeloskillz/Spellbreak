@@ -134,7 +134,6 @@ const IndexPage = props => (
           ))}
         </div>
       </div>
-      <AdComponent></AdComponent>
       <div className="Selectan">
         <h1>Amulets</h1>
       </div>
@@ -266,6 +265,7 @@ const IndexPage = props => (
       <p>Assets provided by Fireball</p>
 {' '}
     </StickyFooter>
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
   </Layout>
 )
 
