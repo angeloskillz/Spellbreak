@@ -46,7 +46,7 @@ const Icon1 = styled.img`
   height: 54px;
   border-radius: 50px;
   border: 2px solid #daa54e;
-  margin-left: 111.5px;
+  margin-left: 109.5px;
   margin-top: 66px;
 `
 const Icon2 = styled.img`
@@ -55,7 +55,7 @@ const Icon2 = styled.img`
   height: 54px;
   border-radius: 50px;
   border: 2px solid #daa54e;
-  margin-left: 111.5px;
+  margin-left: 109.5px;
   margin-top: 66px;
   filter: blur(6px);
 `

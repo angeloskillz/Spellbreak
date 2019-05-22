@@ -45,7 +45,6 @@ const Description = styled.h2`
   font-weight: 800;
   font-size: 14px;
   text-align: center;
-  color: #daa54e;
   margin-top: auto;
   padding-left: 16px;
   padding-right: 16px;
