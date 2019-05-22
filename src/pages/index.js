@@ -239,19 +239,19 @@ const IndexPage = props => (
       className="footer"
       bottomThreshold={50}
       normalStyles={{
-        backgroundColor: '#F7B241',
+        backgroundColor: '',
         padding: '1rem',
         fontSize: '12px',
-        color: 'black',
+        color: 'white',
         textAlign: 'center',
         marginTop: '50px',
         fontWeight: '600'
       }}
       stickyStyles={{
-        backgroundColor: '#F7B241',
+        backgroundColor: '',
         padding: '1rem',
         fontSize: '12px',
-        color: 'black',
+        color: 'white',
         textAlign: 'center',
         marginTop: '50px',
         fontWeight:'800'
@@ -261,7 +261,7 @@ const IndexPage = props => (
       <p>SBWIKI is not affiliated or part of Proletariat Inc. All Spellbreak copyrights and art assets belong to Proletariat Inc.</p>
       Made by
 {' '}
-      <a href="https://twitter.com/AngeloCant1">AngeloC</a> & <a href="https://twitter.com/IGNSkillz4Killz">Skillz4Killz</a>
+      <a style={{ color: '#daa54e' }} href="https://twitter.com/AngeloCant1">AngeloC</a> & <a style={{ color: '#daa54e' }} href="https://twitter.com/IGNSkillz4Killz">Skillz4Killz</a>
       <p>Assets provided by Fireball</p>
 {' '}
     </StickyFooter>

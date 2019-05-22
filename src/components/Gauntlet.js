@@ -59,6 +59,14 @@ const Icon2 = styled.img`
   margin-top: 66px;
   filter: blur(6px);
 `
+const Icon3 = styled.img`
+  width: 54px;
+  height: 54px;
+  border-radius: 50px;
+  border: 2px solid #daa54e;
+  margin-top: 16px;
+`
+
 const Description = styled.h2`
   font-family: Roboto;
   font-weight: 800;
@@ -143,6 +151,10 @@ class Gauntletbox extends React.Component {
           onRequestClose={this.handleCloseModal}
           shouldCloseOnOverlayClick={true}
         >
+          <Icon3
+            src={require(`../images/Gauntlets/${this.props.image}.png`)}
+            alt={this.props.title}
+          />
           <div className='scrollableg'>
           <Description>{this.props.spellname}</Description>
           <SubDescription>{this.props.description}</SubDescription>
@@ -174,8 +186,7 @@ class Gauntletbox extends React.Component {
           ))}
             <div className='gradientmodalg'></div>
           </div>
-            <button onClick={this.handleCloseModal}>CLOSE</button>
-          
+          <button onClick={this.handleCloseModal} style={{ position: 'absolute', top: '0', right: '5px', width: '30px' }}>X</button>
         </ReactModal>
       </div>
     )
