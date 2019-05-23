@@ -7,10 +7,8 @@ class AdComponent extends React.Component {
     render() {
         return (
             <ins className='adsbygoogle'
-                style={{ display: 'table', height: '120px', maxWidth: '1366px', width: '90%', margin: '0 auto'}}
                 data-ad-client="ca-pub-9376266750696675"
-                data-ad-slot="3155152626"
-                data-full-width-responsive="true"/>
+                enable-page-level-ads= "true"/>
         );
     }
 }
