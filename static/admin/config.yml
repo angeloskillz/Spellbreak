@@ -7,6 +7,7 @@ public_folder: /img
 site_url: https://sbwiki.netlify.com
 logo_url: https://sbwiki.netlify.com/images/Sun.png
 show_preview_links: false
+publish_mode: editorial_workflow
 
 collections:
   - name: "lore"
@@ -18,7 +19,7 @@ collections:
       preview: true
     fields:
       - { label: "Title", name: "title", widget: "string" }
-      - { label: "Type/Category", name: "category", widget: "select", options: ["Lore"], default: ["Lore"] },
+      - { label: "Type/Category", name: "category", widget: "select", options: ["Lore"] }
       - { label: "Publish Date", name: "date", widget: "datetime" }
       - { label: "Book # - Page #", name: "description", widget: "string" }
       - { label: "Body", name: "body", widget: "markdown" }
