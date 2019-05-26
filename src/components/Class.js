@@ -24,6 +24,12 @@ const Class = styled.div`
     -ms-user-select: none;
     user-select: none;
     -webkit-tap-highlight-color: transparent;
+    &:hover{
+transform: scale(1.1);
+transition: 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+z-index: 10000;
+box-shadow: 0px 8px 40px #daa54e;
+  }
 `
 const Sun = styled.img`
   display: block;

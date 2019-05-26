@@ -2,6 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import ReactModal from "react-modal"
 import Tables from 'react-bootstrap/Table';
+import 'animate.css/animate.min.css'
 
 const Class = styled.div`
   position: relative;
@@ -24,6 +25,12 @@ const Class = styled.div`
     -ms-user-select: none;
     user-select: none;
     -webkit-tap-highlight-color: transparent;
+    &:hover{
+transform: scale(1.1);
+transition: 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+z-index: 10000;
+box-shadow: 0px 8px 40px #daa54e;
+  }
 `
 const Glyph = styled.img`
   position: relative;
@@ -46,7 +53,7 @@ const Icon1 = styled.img`
   height: 54px;
   border-radius: 50px;
   border: 2px solid #daa54e;
-  margin-left: 109.5px;
+  margin-left: 109px;
   margin-top: 66px;
 `
 const Icon2 = styled.img`
@@ -55,7 +62,7 @@ const Icon2 = styled.img`
   height: 54px;
   border-radius: 50px;
   border: 2px solid #daa54e;
-  margin-left: 109.5px;
+  margin-left: 109px;
   margin-top: 66px;
   filter: blur(6px);
 `
@@ -129,7 +136,7 @@ class Gauntletbox extends React.Component {
       }
     }
     return (
-      <div tabIndex="0">
+      <div tabIndex="0" style={{userSelect:'none', outline:'none'}}>
         <Class onClick={this.handleOpenModal}>
           <Icon2
             src={require(`../images/Gauntlets/${this.props.image}.png`)}
