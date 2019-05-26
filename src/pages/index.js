@@ -34,7 +34,7 @@ import Desktop from "../components/DesktopTab"
 
 import MediaQuery from "react-responsive"
 import StickyFooter from 'react-sticky-footer'
-import { Adsense } from "../components/ad";
+import Adsense2 from "../components/ad";
 
 const gauntlets = [fire, frost, lightning, stone, toxic, wind]
 const classes = [
@@ -74,9 +74,9 @@ const IndexPage = props => (
         <p>CLOSED ALPHA</p>
       </div>
     </div>
+    <Adsense2></Adsense2>
     <Desktop />
     <MediaQuery query="(max-width: 720px)">
-      <Adsense></Adsense>
       <div className="Selectan">
         <h1>Select a Class</h1>
         <img

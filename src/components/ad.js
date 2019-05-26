@@ -1,8 +1,7 @@
 import React from 'react'
-import { withRouter } from "react-router-dom";
 import AdSense from 'react-adsense';
 
-class Ads_2 extends React.Component {
+class Adsense2 extends React.Component {
     state = {
         active: true
     }
@@ -42,4 +41,4 @@ class Ads_2 extends React.Component {
     }
 }
 
-export const Adsense = withRouter(Ads_2);
+export default Adsense2
