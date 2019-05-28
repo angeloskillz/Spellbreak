@@ -32,6 +32,7 @@ import boots from "../constants/equipment/boots"
 import consumables from "../constants/equipment/consumables"
 import runes from "../constants/equipment/runes"
 import EquipmentBox from "../components/Equipment"
+import Adsense2 from "./ad";
 
 const StyledAppBar = withStyles({
   root: {
@@ -116,6 +117,7 @@ class FullWidthTabs extends React.Component {
     return (
       <MediaQuery query="(min-width: 721px)">
         <div className={classes.root}>
+          <Adsense2></Adsense2>
           <StyledAppBar position="static" color="default">
             <StyledTabs
               value={this.state.value}

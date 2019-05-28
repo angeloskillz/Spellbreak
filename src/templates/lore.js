@@ -3,12 +3,14 @@ import Helmet from "react-helmet"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import Lore from "../components/lore"
+import Adsense2 from "../components/ad";
 
 const BlogPost = ({ data }) => {
   const { markdownRemark: post } = data
   // console.log(post)
   return (
     <Layout>
+      <Adsense2></Adsense2>
       <Lore
         content={post.html}
         description={post.frontmatter.description}
