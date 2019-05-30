@@ -278,6 +278,8 @@ a {
   bottom: 0;
   background: rgba(41, 41, 41, 0.801);
   backdrop-filter: blur(20px);
+
+  z-index: 10000;
 }
 
 .Modal button {

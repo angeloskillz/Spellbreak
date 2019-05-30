@@ -28,8 +28,8 @@ const Class = styled.div`
     &:hover{
 transform: scale(1.1);
 transition: 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
-z-index: 10000;
-box-shadow: 0px 8px 40px #daa54e;
+box-shadow: 0px 10px 25px 1px rgba(218,165,78,0.3);
+z-index: 1;
   }
 `
 const Glyph = styled.img`
