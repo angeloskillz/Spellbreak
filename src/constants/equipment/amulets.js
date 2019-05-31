@@ -2,25 +2,25 @@ export default [
   {
     name: "Student's Amulet",
     image: ``,
-    description: ["Spell Damage +5%."],
+    description: ["Spell Damage +5%.", "Max Mana +15"],
     type: `Common`,
   },
   {
     name: "Amulet of Knowledge",
     image: ``,
-    description: ["Max Mana +25."],
+    description: ["Max Mana +25.", "Max Mana +30"],
     type: `Uncommon`,
   },
   {
     name: "Nimble Amulet",
     image: ``,
-    description: ["Cast Speed +15%."],
+    description: ["Cast Speed +15%.", "Max Mana +30"],
     type: `Uncommon`,
   },
   {
     name: "Thinker's Amulet",
     image: ``,
-    description: ["Mana Costs -20%."],
+    description: ["Mana Costs -20%.", "Max Mana +30"],
     type: `Uncommon`,
   },
   {
@@ -30,9 +30,9 @@ export default [
     type: `Rare`,
   },
   {
-    name: "Quickening Amulet",
+    name: "Amulet of the Berserker",
     image: ``,
-    description: ["Sorcery Cooldowns -35%."],
+    description: ["Sorcery Cooldowns -35%.", "Max Mana +45"],
     type: `Rare`,
   },
   {
@@ -90,10 +90,10 @@ export default [
     type: `Epic`,
   },
   {
-    name: "Behemoth Amulet",
+    name: "Amulet of the Behemoth",
     image: ``,
     description: [
-      "Mana Costs -15%",
+      "Max Mana +75%",
       "Cast Speed +25%",
       "Spell Damage +10%.",
     ],
@@ -108,7 +108,7 @@ export default [
   {
     name: "Amulet of the Scribe",
     image: ``,
-    description: ["On Rune Use: Refresh Sorcery cooldowns", "Cooldown 5s"],
+    description: ["On Rune Use: Refresh Sorceries", "Cooldown 5s", "Max Mana +75"],
     type: `Legendary`,
   },
 ]
