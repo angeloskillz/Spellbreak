@@ -8,7 +8,7 @@ const Class = styled.div`
   height: 230px;
   align-items: stretch;
   border-radius: 26px;
-  background: #1a2327;
+  background-image: url(https://i.imgur.com/aPYEnm7.png);
   border: 1.5px solid #daa54e;
   box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
   margin-left: 16px;
