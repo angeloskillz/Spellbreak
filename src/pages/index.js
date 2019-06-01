@@ -2,7 +2,6 @@ import React from "react"
 import { graphql } from "gatsby"
 import ImgHero from "gatsby-image"
 
-import Helmet from "react-helmet"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Classbox from "../components/Class"

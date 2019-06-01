@@ -33,6 +33,8 @@ import consumables from "../constants/equipment/consumables"
 import runes from "../constants/equipment/runes"
 import EquipmentBox from "../components/Equipment"
 import Adsense2 from "./ad";
+import lores from "../constants/lores";
+import LoreBox from "../components/Lorecard";
 
 const StyledAppBar = withStyles({
   root: {
@@ -129,6 +131,7 @@ class FullWidthTabs extends React.Component {
               <StyledTab label="CLASSES" className="button" />
               <StyledTab label="GAUNTLETS" className="button" />
               <StyledTab label="EQUIPMENT" className="button" />
+              <StyledTab label="LORES" className="button" />
             </StyledTabs>
           </StyledAppBar>
           {value === 0 && (
@@ -297,6 +300,35 @@ class FullWidthTabs extends React.Component {
                 <div className="CardboxGroup">
                   {runes.map((equipment, index) => (
                     <EquipmentBox key={index} details={equipment} />
+                  ))}
+                </div>
+              </div>
+            </TabContainer>
+          )}
+          {value === 3 && (
+            <TabContainer>
+              <div className="Selectan">
+                <h1>Lores</h1>
+              </div>
+              <img
+                src={require("../images/Divider2.png")}
+                style={{
+                  width: "200px",
+                  display: "block",
+                  margin: "0 auto",
+                  marginBottom: "24px",
+                }}
+                alt="divider"
+              />
+              <div className="CardboxGroupScroll">
+                <div className="CardboxGroup">
+                  {lores.map((lore, index) => (
+                    <LoreBox
+                      key={index}
+                      title={lore.title}
+                      link={lore.link}
+                      description={lore.description}
+                    />
                   ))}
                 </div>
               </div>

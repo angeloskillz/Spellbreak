@@ -6,10 +6,10 @@ export default props => (
     <br />
     {props.helmet || ""}
     <div className="lore">
-      <h1 className="loreTitle" style={{ marginTop: "2%" }}>
+      <p className="loreDate">{props.date}</p>
+      <h1 className="loreTitle">
         {props.title}
       </h1>
-      <p className="loreDate">Published: {props.date}</p>
       <p className="loreDescription">{props.description}</p>
       <div className="loreContent">{props.content}</div>
     </div>

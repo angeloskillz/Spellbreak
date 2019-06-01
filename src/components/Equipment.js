@@ -77,10 +77,10 @@ export default props => (
     <Title>{props.details.name}</Title>
     <SubDescription>{props.details.description.join(`\n`)}</SubDescription>
     {props.details.cooldown ? (
-      <SubDescription>Cooldown: {props.details.cooldown}</SubDescription>
+      <SubDescription style={{marginTop: '0px', marginBottom:'7px'}}>Cooldown: {props.details.cooldown}</SubDescription>
     ) : null}
     {props.details.duration ? (
-      <SubDescription>Duration: {props.details.duration}</SubDescription>
+      <SubDescription style={{ marginTop: '0px' }}>Duration: {props.details.duration}</SubDescription>
     ) : null}
     <Description
       className={props.details.type ? props.details.type.toLowerCase() : null}

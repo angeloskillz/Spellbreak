@@ -46,6 +46,7 @@ export default {
     details: [
       { name: `Cooldown`, value: `15 Seconds` },
       { name: `Duration`, value: `3 Seconds` },
+      { name: `Max Pull Distance`, value: `13m` },
     ],
   },
 }

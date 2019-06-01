@@ -18,7 +18,7 @@ export default [
     type: `Uncommon`,
   },
   {
-    name: "Springstep",
+    name: "Springstep Rune",
     image: ``,
     description: ["Leap into the air."],
     cooldown: "5 Seconds",
@@ -66,7 +66,7 @@ export default [
     type: `Epic`,
   },
   {
-    name: "Wolf's Eye Blood Rune",
+    name: "Wolf's Blood Rune",
     image: ``,
     description: [
       "Opponents are highlighted in your screen for a period of time.",

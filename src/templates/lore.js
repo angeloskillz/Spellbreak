@@ -12,9 +12,9 @@ const BlogPost = ({ data }) => {
     <Layout>
       <Adsense2></Adsense2>
       <Lore
+        date={post.frontmatter.date}
         content={post.html}
         description={post.frontmatter.description}
-        date={post.frontmatter.date}
         helmet={
           <Helmet titleTemplate="%s | Lore">
             <title>{post.frontmatter.title}</title>
