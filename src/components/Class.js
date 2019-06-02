@@ -15,7 +15,7 @@ const Class = styled.div`
   margin-top: 16px;
   cursor: pointer;
   outline: none;
-
+    transition: .8s cubic-bezier(.2,.8,.2,1);
     box-sizing: border-box;
     -webkit-touch-callout: none;
     -webkit-user-select: none;

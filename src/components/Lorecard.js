@@ -10,6 +10,7 @@ const Class = styled.div`
   border-radius: 26px;
   background-image: url(https://i.imgur.com/aPYEnm7.png);
   border: 1.5px solid #daa54e;
+      transition: .8s cubic-bezier(.2,.8,.2,1);
   box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
   margin-left: 16px;
   margin-top: 16px;
