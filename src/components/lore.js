@@ -11,7 +11,7 @@ export default props => (
         {props.title}
       </h1>
       <p className="loreDescription">{props.description}</p>
-      <div className="loreContent">{props.content}</div>
+      <div className="loreContent" dangerouslySetInnerHTML={{ __html: props.content }}></div>
     </div>
   </div>
 )
