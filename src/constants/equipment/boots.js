@@ -1,26 +1,21 @@
 export default [
   {
-    name: "Rubber Boots",
-    image: ``,
-    description: ["Immune: Toxic Puddles","Run Speed: +5%"],
-    type: `Common`,
-  },
-  {
-    name: "Spiked Boots",
-    image: ``,
-    description: ["On Ice: Rune Speed: +40%", "Immune: Ice Patches", "Run Speed: +5%"],
-    type: `Common`,
-  },
-  {
     name: "Student Boots",
     image: ``,
-    description: ["Run Speed: +10%.", "Run Speed: +10%"],
-    type: `Uncommon`,
+    description: ["Run Speed: +5%"],
+    type: `Common`,
   },
   {
-    name: "Boots of the Cat",
+    name: "Uncommon Boots",
     image: ``,
-    description: ["Max Jump: +35%"],
+    description: ["Run Speed: +10%"],
+    type: `Uncommon`,
+  },
+
+  {
+    name: "Rare Boots",
+    image: ``,
+    description: ["Run Speed: +15%"],
     type: `Rare`,
   },
   {
@@ -55,21 +50,9 @@ export default [
     type: `Epic`,
   },
   {
-    name: "Boots of Sprinting",
-    image: ``,
-    description: ["Run Speed: +25%"],
-    type: `Epic`,
-  },
-  {
     name: "Boots of the Slayer",
     image: ``,
     description: ["Triple Jump", "Max Jump: +25%", "Run Speed +25%"],
-    type: `Legendary`,
-  },
-  {
-    name: "Padded Boots",
-    image: ``,
-    description: ["Move Silently"],
     type: `Legendary`,
   },
   {

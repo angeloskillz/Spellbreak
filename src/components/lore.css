@@ -25,7 +25,6 @@
 
 .loreContent {
   text-align: left;
-  margin-left: 20%;
-  margin-right: 20%;
+  max-width: 1300px;
   white-space: pre-line
 }
