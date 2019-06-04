@@ -10,7 +10,6 @@ const BlogPost = ({ data }) => {
   // console.log(post)
   return (
     <Layout>
-      <Adsense2></Adsense2>
       <Lore
         date={post.frontmatter.date}
         content={post.html}

@@ -6,16 +6,21 @@
 .loreTitle {
   text-align: center;
   max-width: 100%;
-  margin-top: 16px;
-  margin-bottom: 0px;
+  margin-top: 7px;
+  margin-left: 16px;
+  margin-right: 16px;
+  margin-bottom: 16pxpx;
   font-family: QuadratSerial;
   color: #daa54e;
+  font-size: 30px;
 }
 
 .loreDate {
   text-align: center;
   margin-top: 32px;
   text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 600
 }
 
 .loreDescription {
@@ -24,7 +29,29 @@
 }
 
 .loreContent {
-  text-align: left;
-  max-width: 1300px;
-  white-space: pre-line
+  text-align: center;
+    width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.loreContent h1{
+  font-size: 20px;
+}
+
+.loreContent h2{
+  font-size: 18px;
+}
+
+.loreContent p{
+  font-size: 16px;
+}
+
+@media (max-width:1300px){
+.loreContent {
+  max-width: 90%;
+  margin-left: 16px;
+  margin-right: 16px;
+  margin: 0 auto;
+}
 }

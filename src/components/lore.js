@@ -10,7 +10,16 @@ export default props => (
       <h1 className="loreTitle">
         {props.title}
       </h1>
-      <p className="loreDescription">{props.description}</p>
+      <img
+        src={require("../images/Divider.png")}
+        style={{
+          width: "250px",
+          display: "block",
+          margin: "0 auto",
+          marginBottom: "24px",
+        }}
+        alt="divider"
+      />
       <div className="loreContent" dangerouslySetInnerHTML={{ __html: props.content }}></div>
     </div>
   </div>

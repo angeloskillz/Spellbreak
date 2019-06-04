@@ -8,8 +8,8 @@ const Class = styled.div`
   height: 230px;
   align-items: stretch;
   border-radius: 26px;
-  background-image: url(https://i.imgur.com/aPYEnm7.png);
-  border: 1.5px solid #daa54e;
+  background-image: url(https://i.imgur.com/hZAT7Ng.png);
+  border: 1px solid transparent;
       transition: .8s cubic-bezier(.2,.8,.2,1);
   box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
   margin-left: 16px;
@@ -37,7 +37,6 @@ const Title = styled.h1`
   font-size: 18px;
   text-align: center;
   color: #fff;
-  text-shadow: 0px 3px 6px #000;
   margin-top: 16px;
   text-transform: uppercase;
   width: 248px;

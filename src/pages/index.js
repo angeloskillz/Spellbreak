@@ -76,7 +76,6 @@ const IndexPage = props => (
         <p>CLOSED ALPHA</p>
       </div>
     </div>
-    <Adsense2></Adsense2>
     <Desktop />
     <MediaQuery query="(max-width: 720px)">
       <div className="Selectan">
