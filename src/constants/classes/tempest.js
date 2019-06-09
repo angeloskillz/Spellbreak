@@ -18,7 +18,7 @@ export default {
     {
       name: `Squall`,
       type: `Selectable Scroll 2`,
-      description: `For every spell cast in the air, increases damage by 6/8/10% up to a max of 30/40/50%. After touching the ground, all stacks are lost.`,
+      description: `For each spell cast in the air, gain 6%/8%/10% spell damage, up to a max of 5 stacks. After touching the ground, all stacks are lost.`,
       image: ``,
     },
     {

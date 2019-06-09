@@ -18,13 +18,13 @@ export default {
     {
       name: `High Velocity`,
       type: `Selectable Scroll 2`,
-      description: `Increases projectile speed by 30/60/90%.`,
+      description: `Increases projectile speed by 15%/30%/45%.`,
       image: ``,
     },
     {
       name: `Steady Aim`,
       type: `Selectable Scroll 3`,
-      description: `After standing still for 4 seconds, increase your damage by 20/30/40%.`,
+      description: `After standing still for 1 second, increases your spell damage by 4%/6%/8% every second. stacks up to 5 times.`,
       image: ``,
     },
   ],

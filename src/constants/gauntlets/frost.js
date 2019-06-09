@@ -48,6 +48,6 @@ export default {
   ultimate: {
     name: `Flash Freeze`,
     description: `Freezes people around caster after a short cast time. Frozen people take half damage.`,
-    details: [{ name: `Cooldown`, value: `10 Seconds` }],
+    details: [{ name: `Cooldown`, value: `20 Seconds` }],
   },
 }

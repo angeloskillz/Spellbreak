@@ -288,8 +288,10 @@ const IndexPage = props => (
       Made by
 {' '}
       <a style={{ color: '#daa54e' }} href="https://twitter.com/AngeloCant1">AngeloC</a> & <a style={{ color: '#daa54e' }} href="https://twitter.com/IGNSkillz4Killz">Skillz4Killz</a>
-      <p>Assets provided by Fireball</p>
-{' '}
+      <p>Assets provided by Fireball & 
+      <a style={{ color: '#daa54e' }} href="https://twitter.com/FN_flocci"> FN_flocci</a>
+        <a style={{ color: '#6441a5' }} href="https://www.twitch.tv/fn_flocci"> (Twitch)</a>
+</p>{' '}
     </StickyFooter>
     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
   </Layout>

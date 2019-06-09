@@ -4,7 +4,7 @@ export default [
     image: ``,
     description: ["Jumps up, then you slowly fall down for a duration."],
     cooldown: "12 Seconds",
-    duration: "3.7 Seconds",
+    duration: ["3.7 Seconds (Peak of rune)"," - 5.7 Total duration"],
     type: `Uncommon`,
   },
   {
@@ -31,7 +31,7 @@ export default [
     description: [
       "For the duration, fly up and propel yourself towards where your mouse points.",
     ],
-    cooldown: "25 Seconds",
+    cooldown: "15 Seconds",
     duration: "5 Seconds",
     type: `Rare`,
   },
