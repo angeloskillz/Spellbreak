@@ -12,8 +12,8 @@ export default {
     {
       name: `Arc Flash`,
       type: `Selectable Scroll 1`,
-      description: ``,
-      image: `Your lightning bolts have a 25% chance to leave behind a ball of lightning that strikes nearby players.`,
+      description: `Your lightning bolts have a 25% chance to leave behind a ball of lightning that strikes nearby players 25%/50%/75%`,
+      image: ``,
     },
     {
       name: `Charged Rune`,
