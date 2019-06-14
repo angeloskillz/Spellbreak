@@ -6,7 +6,7 @@ export default {
     {
       name: `Frenzy`,
       type: `Passive`,
-      description: `When you're at or below 35HP, increases your spell damage by 25% and sprint speed by 20%.`,
+      description: `When you're at or below 35HP, increases your spell damage by 25% and sprint speed by 2.`,
       image: ``,
     },
     {

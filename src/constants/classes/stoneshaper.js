@@ -18,7 +18,7 @@ export default {
     {
       name: `Flesh to Stone`,
       type: `Selectable Scroll 2`,
-      description: `Sets your armor and max armor to 200/250/300, but max HP to 10.`,
+      description: `Over 10s, increases your armore and mac armor to 200, but lowers your max health to 10`,
       image: ``,
     },
     {

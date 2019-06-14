@@ -24,7 +24,7 @@ export default {
     {
       name: `Vanishing Mists`,
       type: `Selectable Scroll 3`,
-      description: `Become immune to all Toxic Clouds and become invisible and increase your sprint speed by 35% for 3/6/9 seconds when entering one.`,
+      description: `Become immune to all Toxic Clouds and become invisible and increase your sprint speed by 3 for 3 seconds when entering one.`,
       image: ``,
     },
   ],

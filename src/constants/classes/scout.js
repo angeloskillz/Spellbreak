@@ -12,7 +12,7 @@ export default {
     {
       name: `Invigorate`,
       type: `Selectable Scroll 1`,
-      description: `Every 3 seconds, increases your and teammates' sprint speed by 15/20/25% for 4 seconds.`,
+      description: `Every 3 seconds, increases your and teammates' sprint speed by 1/2/3 for 4 seconds.`,
       image: ``,
     },
     {

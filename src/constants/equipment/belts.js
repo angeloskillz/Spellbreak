@@ -30,9 +30,13 @@ export default [
     type: `Epic`,
   },
   {
-    name: "Impenetrable Belt",
+    name: "Belt of the Mender",
     image: ``,
-    description: ["Damage Resistance: +20%", "Max Armor: +65"],
+    description: [
+      "Armor Recovery Rate: +50%",
+      "Health Recovery Rate: +50%",
+      "Max Armor: +65"
+    ],
     type: `Epic`,
   },
   {
@@ -40,7 +44,7 @@ export default [
     image: ``,
     description: [
       "One Rune Use: Damage Resistance: +95% (1s)",
-      "Cooldown: 5 Seconds.",
+      "Cooldown: 5s.",
       "Max Armor: +65"
     ],
     type: `Epic`,

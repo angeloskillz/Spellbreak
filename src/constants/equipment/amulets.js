@@ -35,6 +35,16 @@ export default [
     description: ["Max Mana +60"],
     type: `Epic`,
   },
+
+  {
+    name: "Amulet of the Mender",
+    image: ``,
+    description: [
+      "Drain Armor: +20%",
+      "Max Mana +60",
+    ],
+    type: `Epic`,
+  },
   {
     name: "Amulet of the Slayer",
     image: ``,
@@ -45,21 +55,12 @@ export default [
     type: `Epic`,
   },
   {
-    name: "Amulet of the Survivor",
-    image: ``,
-    description: [
-      "Drain Health: 25%",
-      "Max Mana: +60",
-    ],
-    type: `Epic`,
-  },
-  {
     name: "Amulet of the Behemoth",
     image: ``,
     description: [
       "Spell Damage +10%.",
-      "Cast Speed +25%",
-      "Max Mana +75%",
+      "Cast Speed +15%",
+      "Max Mana +75",
     ],
     type: `Legendary`,
   },

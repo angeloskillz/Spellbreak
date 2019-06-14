@@ -11,7 +11,7 @@ export default [
     name: "Invisibility Rune",
     image: ``,
     description: [
-      "Become invisible and increases your sprint speed by 35%. (Distorted Light at your position with High effects).",
+      "Become invisible and increases your sprint speed by 3. (Distorted Light at your position with High effects).",
     ],
     cooldown: "10 Seconds",
     duration: "10 Seconds",

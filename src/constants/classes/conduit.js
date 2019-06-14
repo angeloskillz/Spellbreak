@@ -6,7 +6,7 @@ export default {
     {
       name: `Lightning Fast`,
       type: `Passive`,
-      description: `Increases sprint speed by 20%, but breaks briefly when you attack or take damage.`,
+      description: `Increases your run speed by 2, but breaks briefly when you attack or take damage.`,
       image: ``,
     },
     {

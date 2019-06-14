@@ -18,7 +18,7 @@ export default {
     {
       name: `Frozen Alacrity`,
       type: `Selectable Scroll 2`,
-      description: `Increase sprint speed on ice by 100%/125%/150% and no longer slip on ice.`,
+      description: `Increase sprint speed on ice by 10/12/14 and no longer slip on ice.`,
       image: ``,
     },
     {
