@@ -37,6 +37,7 @@ import MediaQuery from "react-responsive"
 import StickyFooter from 'react-sticky-footer'
 import Adsense2 from "../components/ad";
 import LoreBox from "../components/Lorecard";
+import Model from "../components/3dmodel";
 
 const gauntlets = [fire, frost, lightning, stone, toxic, wind]
 const classes = [
