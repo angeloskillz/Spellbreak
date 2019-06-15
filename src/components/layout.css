@@ -13,6 +13,10 @@
       format("svg"); /* Legacy iOS */
 }
 
+img {
+
+    -webkit-user-drag: none;
+}
 
 html {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,

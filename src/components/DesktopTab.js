@@ -35,6 +35,8 @@ import EquipmentBox from "../components/Equipment"
 import Adsense2 from "./ad";
 import lores from "../constants/lores";
 import LoreBox from "../components/Lorecard";
+import Model from "./3dmodel";
+import skins from "../constants/skins"
 
 const StyledAppBar = withStyles({
   root: {
@@ -131,6 +133,7 @@ class FullWidthTabs extends React.Component {
               <StyledTab label="CLASSES" className="button" />
               <StyledTab label="GAUNTLETS" className="button" />
               <StyledTab label="EQUIPMENT" className="button" />
+              <StyledTab label="SKINS" className="button" />
               <StyledTab label="LORES" className="button" />
             </StyledTabs>
           </StyledAppBar>
@@ -306,6 +309,34 @@ class FullWidthTabs extends React.Component {
             </TabContainer>
           )}
           {value === 3 && (
+            <TabContainer>
+              <div className="Selectan">
+                <h1>Skins</h1>
+                <img
+                  src={require("../images/Divider2.png")}
+                  style={{
+                    width: "200px",
+                    display: "block",
+                    margin: "0 auto",
+                    marginBottom: "24px",
+                  }}
+                  alt="divider"
+                />
+              </div>
+              <div className="CardboxGroupScroll">
+                <div className="CardboxGroup">
+                  {skins.map((skin, index) => (
+                    <Model
+                      key={index}
+                      title={skin.title}
+                      image={require(`./../images/Skin/${skin.title}.png`)}
+                    />
+                  ))}
+                </div>
+              </div>
+            </TabContainer>
+          )}
+          {value === 4 && (
             <TabContainer>
               <div className="Selectan">
                 <h1>Lores</h1>

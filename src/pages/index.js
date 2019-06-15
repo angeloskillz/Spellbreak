@@ -35,9 +35,9 @@ import Desktop from "../components/DesktopTab"
 
 import MediaQuery from "react-responsive"
 import StickyFooter from 'react-sticky-footer'
-import Adsense2 from "../components/ad";
 import LoreBox from "../components/Lorecard";
 import Model from "../components/3dmodel";
+import skins from "../constants/skins"
 
 const gauntlets = [fire, frost, lightning, stone, toxic, wind]
 const classes = [
@@ -233,6 +233,30 @@ const IndexPage = props => (
         <div className="CardboxGroup">
           {runes.map((equipment, index) => (
             <EquipmentBox key={index} details={equipment} />
+          ))}
+        </div>
+      </div>
+      <div className="Selectan">
+        <h1>Skins</h1>
+        <img
+          src={require("../images/Divider2.png")}
+          style={{
+            width: "200px",
+            display: "block",
+            margin: "0 auto",
+            marginBottom: "24px",
+          }}
+          alt="divider"
+        />
+      </div>
+      <div className="CardboxGroupScroll">
+        <div className="CardboxGroup">
+          {skins.map((skin, index) => (
+            <Model
+              key={index}
+              title={skin.title}
+              image={require(`./../images/Skin/${skin.title}.png`)}
+            />
           ))}
         </div>
       </div>
