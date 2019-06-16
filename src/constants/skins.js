@@ -11,6 +11,10 @@ export default [
         title: "Patchwork",
         link: "https://www.epicgames.com/store/en-US/product/spellbreak/master-pack?sessionInvalidated=true"
     },
+
+    {
+        title: "Blind Faith"
+    },
     {
         title: "Hollow"
     },

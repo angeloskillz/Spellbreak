@@ -43,7 +43,7 @@ const Title = styled.h1`
 
 const Model = props => (
   <div tabIndex='0' style={{ userSelect: 'none', outline: 'none'}}>
-        <Class>
+        <Class style={{marginTop:'135px'}}>
             <ImgModel src={props.image}/>
             <Title>{props.title}</Title>
         </Class>
