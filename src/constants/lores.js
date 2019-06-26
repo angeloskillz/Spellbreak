@@ -1,7 +1,12 @@
 export default [
     {
+        title: "A Seed of a Secret - Release 27 Prologue",
+        link: `/lore/2019-06-26-a-seed-of-a-secret-release-27-prologue/`,
+        description: ["Book 4 - Page 124, 133 & Book 2 - Page 476"],
+    },
+    {
         title: "Homecoming - Release 26 Prologue",
-        link: `/lore//2019-06-11-homecoming-release-26-prologue/`,
+        link: `/lore/2019-06-11-homecoming-release-26-prologue/`,
         description: ["Book 1 - Page 49,38,44 & Book 4 - Page 53"],
     },
     {
