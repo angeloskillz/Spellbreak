@@ -46,24 +46,25 @@ const Title = styled.h1`
   text-align: center;
   color: #fff;
   text-transform: uppercase;
+  margin-top: 0px;
 `
 const Icon1 = styled.img`
   position: absolute;
-  width: 54px;
-  height: 54px;
+  width: 64px;
+  height: 64px;
   border-radius: 50px;
   border: 2px solid #daa54e;
-  margin-left: 109px;
-  margin-top: 66px;
+  margin-left: 104px;
+  margin-top: 63px;
 `
 const Icon2 = styled.img`
   position: absolute;
-  width: 54px;
-  height: 54px;
+  width: 64px;
+  height: 64px;
   border-radius: 50px;
   border: 2px solid #daa54e;
-  margin-left: 109px;
-  margin-top: 66px;
+  margin-left: 104px;
+  margin-top: 63px;
   filter: blur(6px);
 `
 const Icon3 = styled.img`
