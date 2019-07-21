@@ -1,8 +1,13 @@
 export default [
     {
+        title: "Fist of the Vowguard - Release 28 Prologue",
+        link: `/lore/2019-07-21-fist-of-the-vowguard-release-28-prologue/`,
+        description: ["Book 4 - Page 144,146,147,165,172,178"],
+    },
+    {
         title: "A Seed of a Secret - Release 27 Prologue",
         link: `/lore/2019-06-26-a-seed-of-a-secret-release-27-prologue/`,
-        description: ["Book 4 - Page 124, 133 & Book 2 - Page 476"],
+        description: ["Book 4 - Page 124,133 & Book 2 - Page 476"],
     },
     {
         title: "Homecoming - Release 26 Prologue",

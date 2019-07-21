@@ -329,7 +329,7 @@ export const pageQuery = graphql`
     imageOne: file(relativePath: { eq: "BG1.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 2560) {
-          ...GatsbyImageSharpFluid_tracedSVG
+          ...GatsbyImageSharpFluid
         }
       }
     }

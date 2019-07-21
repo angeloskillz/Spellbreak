@@ -49,10 +49,10 @@ export default [
     name: "Chronomaster Rune",
     image: ``,
     description: [
-      "Turn back 4 seconds in time, regaining lost HP and Armor over 3 seconds.",
+      "4 seconds after using the rune, you'll quickly return to the position where you used it. While rewinding, you're invulnerable. Your health and armor will be returned to the higher value between the old value and their current value. Any negative effects on you will be removed.",
     ],
-    cooldown: "25 Seconds",
-    duration: "3 Seconds",
+    cooldown: "15 Seconds",
+    duration: "4 Seconds",
     type: `Rare`,
   },
   {
