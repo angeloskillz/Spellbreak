@@ -318,7 +318,6 @@ const IndexPage = props => (
         <a style={{ color: '#6441a5' }} href="https://www.twitch.tv/fn_flocci"> (Twitch)</a>
 </p>{' '}
     </StickyFooter>
-    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
   </Layout>
   )
 
