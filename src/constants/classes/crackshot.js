@@ -24,7 +24,7 @@ export default {
     {
       name: `Steady Aim`,
       type: `Selectable Scroll 3`,
-      description: `After standing still for 1 second, increases your spell damage by 4%/6%/8% every second. stacks up to 5 times.`,
+      description: `After standing still for 1 second, increases your spell damage by 4%/6%/8% every second. stacks up to 5 times times up to a maximum of 20/30/40%.`,
       image: ``,
     },
   ],
