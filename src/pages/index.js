@@ -316,7 +316,8 @@ const IndexPage = props => (
       <p>Assets provided by Fireball & 
       <a style={{ color: '#daa54e' }} href="https://twitter.com/FN_flocci"> FN_flocci</a>
         <a style={{ color: '#6441a5' }} href="https://www.twitch.tv/fn_flocci"> (Twitch)</a>
-</p>{' '}
+      </p>{' '}
+      <p>Privacy Policy: We don’t store your data</p>
     </StickyFooter>
   </Layout>
   )
