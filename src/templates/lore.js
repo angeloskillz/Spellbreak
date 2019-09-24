@@ -48,7 +48,7 @@ const BlogPost = ({ data }) => {
         <p>SBWIKI is not affiliated or part of Proletariat Inc. All Spellbreak copyrights and art assets belong to Proletariat Inc.</p>
         Made by
 {' '}
-        <a style={{ color: '#daa54e' }} href="https://twitter.com/AngeloCant1">AngeloC</a> & <a style={{ color: '#daa54e' }} href="https://twitter.com/IGNSkillz4Killz">Skillz4Killz</a>
+        <a style={{ color: '#daa54e' }} href="https://twitter.com/AC1design">AngeloC</a> & <a style={{ color: '#daa54e' }} href="https://twitter.com/IGNSkillz4Killz">Skillz4Killz</a>
         <p>Assets provided by Fireball &
       <a style={{ color: '#daa54e' }} href="https://twitter.com/FN_flocci"> FN_flocci</a>
           <a style={{ color: '#6441a5' }} href="https://www.twitch.tv/fn_flocci"> (Twitch)</a>
